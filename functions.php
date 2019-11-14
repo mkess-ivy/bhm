@@ -116,6 +116,8 @@ add_action( 'widgets_init', 'bhm_widgets_init' );
 function bhm_scripts() {
 	wp_enqueue_style( 'bhm-style', get_stylesheet_uri() );
 
+	wp_enqueue_style( 'frow', get_template_directory_uri() . '/css/frow.css');
+
 	wp_enqueue_script( 'bhm-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'bhm-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );

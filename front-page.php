@@ -12,6 +12,11 @@
  * @package bhmhs001
  */
 
+// echo '<pre>';
+// printr(get_field('site_logo'));
+// echo '</pre>';
+// die();
+
 get_header();
 ?>
 

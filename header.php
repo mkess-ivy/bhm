@@ -1,13 +1,14 @@
 <?php
 /**
- * The header for our theme
+ * Theme Header
  *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
+ * 
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package bhmhs001
  */
+
 
 ?>
 <!doctype html>
@@ -25,25 +26,14 @@
 	<div class="main-page">
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'bhm' ); ?></a>
 
+		<?php
+			$bhm_logo = get_field('bhm_logo');
+		?>
 		<header id="masthead" class="site-header inner">
 			<div class="site-branding">
-				<?php
-				the_custom_logo();
-				if ( is_front_page() && is_home() ) :
-					?>
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<?php
-				else :
-					?>
-					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-					<?php
-				endif;
-				$bhm_description = get_bloginfo( 'description', 'display' );
-				if ( $bhm_description || is_customize_preview() ) :
-					?>
-					<p class="site-description"><?php echo $bhm_description; /* WPCS: xss ok. */ ?></p>
-				<?php endif; ?>
-			</div><!-- .site-branding -->
+				<div class="site-logo">
+					<img src="<?php echo get_field('bhm_logo')['url'] ?>" />
+				</div><!-- .site-branding -->
 
 			<nav id="site-navigation" class="main-navigation">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'bhm' ); ?></button>
