@@ -32,8 +32,9 @@
 		<header id="masthead" class="site-header inner">
 			<div class="site-branding">
 				<div class="site-logo">
-					<img src="<?php echo get_field('bhm_logo')['url'] ?>" />
-				</div><!-- .site-branding -->
+					<img src="<?php echo get_field('bhm_logo')['url'] ?>" class="site-logo-img" />
+				</div><!-- .site-logo -->
+			</div><!-- .site-branding -->
 
 			<nav id="site-navigation" class="main-navigation">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'bhm' ); ?></button>
