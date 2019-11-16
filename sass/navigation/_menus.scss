@@ -1,8 +1,10 @@
 .main-navigation {
-	clear: both;
+	// clear: both;
 	display: block;
-	float: left;
+	// float: left;
 	width: 100%;
+	border-top: 1px solid $hairline;
+	padding-top: 12px;
 
 	ul {
 		display: none;
@@ -50,8 +52,11 @@
 	}
 
 	li {
-		float: left;
+		// float: left;
+		display: inline-block;
 		position: relative;
+		padding-right: 50px;
+		text-transform: uppercase;
 
 		&:hover > a,
 		&.focus > a {
@@ -61,6 +66,12 @@
 	a {
 		display: block;
 		text-decoration: none;
+		color: $black;
+
+		&:hover {
+			text-decoration: none;
+			color: $red;
+		}
 	}
 
 	.current_page_item > a,
@@ -82,6 +93,7 @@
 	}
 	.main-navigation ul {
 		display: block;
+		text-align: center;
 	}
 }
 
@@ -104,10 +116,4 @@
 		text-align: right;
 		width: 50%;
 	}
-}
-
-// Logo
-.site-logo {
-	text-align: center;
-	padding: 35px 0;
 }
