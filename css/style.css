@@ -363,6 +363,9 @@ textarea {
   font-size: 1rem;
   line-height: 1.5; }
 
+body {
+  font-family: "Merriweather", sans-serif; }
+
 h1, h2, h3, h4, h5, h6 {
   clear: both; }
 
@@ -419,79 +422,15 @@ html {
   -webkit-box-sizing: inherit;
   box-sizing: inherit; }
 
-body {
-  background: #fff;
-  /* Fallback for when there is no custom background color defined. */ }
-
 hr {
-  background-color: #ccc;
   border: 0;
-  height: 1px;
-  margin-bottom: 1.5em; }
-
-ul, ol {
-  margin: 0 0 1.5em 3em; }
-
-ul {
-  list-style: disc; }
-
-ol {
-  list-style: decimal; }
-
-li > ul,
-li > ol {
-  margin-bottom: 0;
-  margin-left: 1.5em; }
-
-dt {
-  font-weight: bold; }
-
-dd {
-  margin: 0 1.5em 1.5em; }
+  height: 1px; }
 
 img {
   height: auto;
   /* Make sure images are scaled correctly. */
   max-width: 100%;
   /* Adhere to container width. */ }
-
-figure {
-  margin: 1em 0;
-  /* Extra wide images within figure tags don't overflow the content area. */ }
-
-table {
-  margin: 0 0 1.5em;
-  width: 100%; }
-
-/*--------------------------------------------------------------
-# Forms
---------------------------------------------------------------*/
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  border: 1px solid;
-  border-color: #ccc #ccc #bbb;
-  border-radius: 3px;
-  background: #e6e6e6;
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 12px;
-  font-size: 0.75rem;
-  line-height: 1;
-  padding: .6em 1em .4em; }
-  button:hover,
-  input[type="button"]:hover,
-  input[type="reset"]:hover,
-  input[type="submit"]:hover {
-    border-color: #ccc #bbb #aaa; }
-  button:active, button:focus,
-  input[type="button"]:active,
-  input[type="button"]:focus,
-  input[type="reset"]:active,
-  input[type="reset"]:focus,
-  input[type="submit"]:active,
-  input[type="submit"]:focus {
-    border-color: #aaa #bbb #bbb; }
 
 input[type="text"],
 input[type="email"],
@@ -537,17 +476,131 @@ select {
 textarea {
   width: 100%; }
 
+.gallery {
+  margin-bottom: 1.5em; }
+
+.gallery-item {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 100%; }
+  .gallery-columns-2 .gallery-item {
+    max-width: 50%; }
+  .gallery-columns-3 .gallery-item {
+    max-width: 33.33%; }
+  .gallery-columns-4 .gallery-item {
+    max-width: 25%; }
+  .gallery-columns-5 .gallery-item {
+    max-width: 20%; }
+  .gallery-columns-6 .gallery-item {
+    max-width: 16.66%; }
+  .gallery-columns-7 .gallery-item {
+    max-width: 14.28%; }
+  .gallery-columns-8 .gallery-item {
+    max-width: 12.5%; }
+  .gallery-columns-9 .gallery-item {
+    max-width: 11.11%; }
+
+.gallery-caption {
+  display: block; }
+
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0; }
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+  max-width: 100%; }
+
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+  display: inline-block; }
+
 /*--------------------------------------------------------------
 # Layouts - Components
 --------------------------------------------------------------*/
+.bhm-wrapper {
+  padding: 0 75px 75px; }
+
 .site-logo {
+  text-align: center;
+  padding: 35px 0; }
+  .site-logo .site-logo-img {
+    width: 225px; }
+
+.page-template-front-page .entry-title {
+  display: none;
+  color: red;
+  font-size: 200px; }
+
+.slide-title {
+  font-size: 55px !important;
+  text-transform: uppercase;
+  line-height: 1 !important; }
+
+.slick-slider-short-content {
+  font-size: 55px !important;
+  color: #EE534F; }
+  .slick-slider-short-content p {
+    font-size: 45px !important;
+    color: #EE534F !important;
+    margin: 0;
+    text-transform: uppercase; }
+
+.bhm-welcome {
   text-align: center; }
+  .bhm-welcome .accred-logo {
+    padding-bottom: 40px; }
+
+.section-title {
+  padding-bottom: 75px; }
+  .section-title .section-title-text {
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: 700; }
+  .section-title .section-title-bottom {
+    margin: 7px auto 0;
+    width: 100px;
+    border-top: 3px solid #EE534F; }
+
+.section-body {
+  width: 75%;
+  margin: auto; }
+
+.section-highlight .highlight-img {
+  width: 50%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat; }
+
+.section-highlight .highlight-content {
+  width: 50%;
+  background-color: #96120E;
+  color: #fff;
+  padding: 75px 100px; }
+
+.section-highlight .highlight-title {
+  padding-bottom: 40px; }
+  .section-highlight .highlight-title .highlight-title-text {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 26px; }
+  .section-highlight .highlight-title .highlight-title-bottom {
+    margin: 7px auto 0;
+    width: 75px;
+    border-top: 3px solid #fff; }
+
+.section-highlight .highlight-copy {
+  font-family: "Lora", serif; }
 
 /*--------------------------------------------------------------
 # Navigation
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-## Links
 --------------------------------------------------------------*/
 a {
   color: royalblue; }
@@ -560,14 +613,11 @@ a {
   a:hover, a:active {
     outline: 0; }
 
-/*--------------------------------------------------------------
-## Menus
---------------------------------------------------------------*/
 .main-navigation {
-  clear: both;
   display: block;
-  float: left;
-  width: 100%; }
+  width: 100%;
+  border-top: 1px solid #CCBFBF;
+  padding-top: 12px; }
   .main-navigation ul {
     display: none;
     list-style: none;
@@ -593,11 +643,17 @@ a {
     .main-navigation ul li.focus > ul {
       left: auto; }
   .main-navigation li {
-    float: left;
-    position: relative; }
+    display: inline-block;
+    position: relative;
+    padding-right: 50px;
+    text-transform: uppercase; }
   .main-navigation a {
     display: block;
-    text-decoration: none; }
+    text-decoration: none;
+    color: #090807; }
+    .main-navigation a:hover {
+      text-decoration: none;
+      color: #EE534F; }
 
 /* Small menu. */
 .menu-toggle,
@@ -608,7 +664,8 @@ a {
   .menu-toggle {
     display: none; }
   .main-navigation ul {
-    display: block; } }
+    display: block;
+    text-align: center; } }
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
@@ -747,7 +804,7 @@ a {
 .page-content,
 .entry-content,
 .entry-summary {
-  margin: 1.5em 0 0; }
+  margin: 0.8em 0 0; }
 
 .page-links {
   clear: both;
@@ -776,72 +833,4 @@ a {
 
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
 .infinity-end.neverending .site-footer {
-  display: block; }
-
-/*--------------------------------------------------------------
-# Media
---------------------------------------------------------------*/
-.page-content .wp-smiley,
-.entry-content .wp-smiley,
-.comment-content .wp-smiley {
-  border: none;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding: 0; }
-
-/* Make sure embeds and iframes fit their containers. */
-embed,
-iframe,
-object {
-  max-width: 100%; }
-
-/* Make sure logo link wraps around logo image. */
-.custom-logo-link {
-  display: inline-block; }
-
-/*--------------------------------------------------------------
-## Captions
---------------------------------------------------------------*/
-.wp-caption {
-  margin-bottom: 1.5em;
-  max-width: 100%; }
-  .wp-caption img[class*="wp-image-"] {
-    display: block;
-    margin-left: auto;
-    margin-right: auto; }
-  .wp-caption .wp-caption-text {
-    margin: 0.8075em 0; }
-
-.wp-caption-text {
-  text-align: center; }
-
-/*--------------------------------------------------------------
-## Galleries
---------------------------------------------------------------*/
-.gallery {
-  margin-bottom: 1.5em; }
-
-.gallery-item {
-  display: inline-block;
-  text-align: center;
-  vertical-align: top;
-  width: 100%; }
-  .gallery-columns-2 .gallery-item {
-    max-width: 50%; }
-  .gallery-columns-3 .gallery-item {
-    max-width: 33.33%; }
-  .gallery-columns-4 .gallery-item {
-    max-width: 25%; }
-  .gallery-columns-5 .gallery-item {
-    max-width: 20%; }
-  .gallery-columns-6 .gallery-item {
-    max-width: 16.66%; }
-  .gallery-columns-7 .gallery-item {
-    max-width: 14.28%; }
-  .gallery-columns-8 .gallery-item {
-    max-width: 12.5%; }
-  .gallery-columns-9 .gallery-item {
-    max-width: 11.11%; }
-
-.gallery-caption {
   display: block; }

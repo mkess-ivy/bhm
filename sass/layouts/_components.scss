@@ -1,8 +1,101 @@
+// Wrapper
+.bhm-wrapper {
+  padding: 0 75px 75px;
+}
+// Global
 .site-logo {
   text-align: center;
   padding: 35px 0;
 
   .site-logo-img {
     width: 225px;
+  }
+}
+// Home Page
+.page-template-front-page {
+  .entry-title {
+    display: none;
+    color: red;
+    font-size: 200px;
+  }
+}
+
+.slide-title {
+  font-size: 55px !important;
+  text-transform: uppercase;
+  line-height: 1 !important;
+}
+
+.slick-slider-short-content {
+  font-size: 55px !important;
+  color: $red;
+
+  p {
+    font-size: 45px !important;
+    color: $red !important;
+    margin: 0;
+    text-transform: uppercase;
+  }
+}
+
+// Template Classes
+.bhm-welcome {
+  text-align: center;
+
+  .accred-logo {
+    padding-bottom: 40px;
+  }
+}
+
+.section-title {
+  padding-bottom: 75px;
+
+  .section-title-text {
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: $bold;
+  }
+  .section-title-bottom {
+    margin: 7px auto 0;
+    width: 100px;
+    border-top: 3px solid $red;
+  }
+}
+.section-body {
+  width: 75%;
+  margin: auto;
+  // font-size: 20px;
+}
+
+.section-highlight {
+  .highlight-img {
+    width: 50%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  .highlight-content {
+    width: 50%;
+    background-color: $dark-red;
+    color: $white;
+    padding: 75px 100px;
+  }
+  
+  .highlight-title {
+    padding-bottom: 40px;
+
+    .highlight-title-text {
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 26px;
+    }
+    .highlight-title-bottom {
+      margin: 7px auto 0;
+      width: 75px;
+      border-top: 3px solid $white;
+    }
+  }
+  .highlight-copy {
+    font-family: $body-font;
   }
 }

@@ -128,6 +128,12 @@ function bhm_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'bhm_scripts' );
 
+function wpb_add_google_fonts() {
+	wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Lora|Merriweather:400,700', false );
+}
+
+add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
+
 /**
  * Custom template tags for this theme.
  */
