@@ -5,21 +5,18 @@
 // Global
 .site-logo {
   text-align: center;
-  padding: 35px 0;
+  padding: 20px 0;
 
   .site-logo-img {
     width: 225px;
   }
 }
 // Home Page
-.page-template-front-page {
-  .entry-title {
-    display: none;
-    color: red;
-    font-size: 200px;
-  }
+.entry-title {
+  display: none;
 }
 
+// Slides
 .slide-title {
   font-size: 55px !important;
   text-transform: uppercase;
@@ -38,21 +35,19 @@
   }
 }
 
-// Template Classes
-.bhm-welcome {
+
+// Section Title
+.section-title {
+  padding: 75px 0;
   text-align: center;
 
-  .accred-logo {
-    padding-bottom: 40px;
+  &.initial-title {
+    padding-top: 0;
   }
-}
-
-.section-title {
-  padding-bottom: 75px;
 
   .section-title-text {
     font-size: 32px;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     font-weight: $bold;
   }
   .section-title-bottom {
@@ -64,9 +59,9 @@
 .section-body {
   width: 75%;
   margin: auto;
-  // font-size: 20px;
 }
 
+// Highlights
 .section-highlight {
   .highlight-img {
     width: 50%;
@@ -97,5 +92,51 @@
   }
   .highlight-copy {
     font-family: $body-font;
+  }
+}
+
+
+// Testimonials
+.section-testimonials-bg {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 40vh;
+  text-align: center;
+
+  .testimonials-content {
+    font-size: 30px;
+    color: $white;
+    font-weight: $bold;    
+    letter-spacing: 0.7px;
+    line-height: 1.2;
+    width: 70%;
+    margin: auto;
+    padding: 3em 0 1.5em;
+  }
+
+  .testimonials-author {
+    color: $white;
+    font-size: 22px;
+    font-weight: bold;
+  }
+}
+
+// Partners
+.partners-single {
+  width: 160px;
+}
+
+// Buttons
+.bhm-btn-base {
+  div {
+    background: $dark-red;
+    width: auto;
+    display: inline-block;
+    padding: 10px 15px;
+    color: $white;
+    text-transform: uppercase;
+    font-weight: $bold;
   }
 }

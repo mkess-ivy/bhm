@@ -524,14 +524,12 @@ object {
 
 .site-logo {
   text-align: center;
-  padding: 35px 0; }
+  padding: 20px 0; }
   .site-logo .site-logo-img {
     width: 225px; }
 
-.page-template-front-page .entry-title {
-  display: none;
-  color: red;
-  font-size: 200px; }
+.entry-title {
+  display: none; }
 
 .slide-title {
   font-size: 55px !important;
@@ -547,16 +545,13 @@ object {
     margin: 0;
     text-transform: uppercase; }
 
-.bhm-welcome {
-  text-align: center; }
-  .bhm-welcome .accred-logo {
-    padding-bottom: 40px; }
-
 .section-title {
-  padding-bottom: 75px; }
+  padding: 75px 0;
+  text-align: center; }
+  .section-title.initial-title {
+    padding-top: 0; }
   .section-title .section-title-text {
     font-size: 32px;
-    text-transform: uppercase;
     font-weight: 700; }
   .section-title .section-title-bottom {
     margin: 7px auto 0;
@@ -589,6 +584,95 @@ object {
     border-top: 3px solid #fff; }
 .section-highlight .highlight-copy {
   font-family: "Lora", serif; }
+
+.section-testimonials-bg {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 40vh;
+  text-align: center; }
+  .section-testimonials-bg .testimonials-content {
+    font-size: 30px;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    line-height: 1.2;
+    width: 70%;
+    margin: auto;
+    padding: 3em 0 1.5em; }
+  .section-testimonials-bg .testimonials-author {
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold; }
+
+.partners-single {
+  width: 160px; }
+
+.bhm-btn-base div {
+  background: #96120E;
+  width: auto;
+  display: inline-block;
+  padding: 10px 15px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700; }
+
+.bhm-welcome {
+  text-align: center; }
+  .bhm-welcome .accred-logo {
+    padding-bottom: 40px; }
+
+.section-programs {
+  text-align: center; }
+  .section-programs .programs-grid {
+    padding: 60px 0 0; }
+  .section-programs .programs-single {
+    width: 24.3%;
+    margin: 0 2px;
+    background: #96120E;
+    color: #fff;
+    padding: 20px 10px; }
+  .section-programs .programs-single-title {
+    padding: 10px 0 20px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 700; }
+  .section-programs .programs-single-content {
+    font-size: 0.9rem;
+    font-family: "Lora", serif; }
+
+.bhm-about-single {
+  width: 31%;
+  text-align: center; }
+  .bhm-about-single .bhm-about-single-title {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 20px;
+    padding-bottom: 30px; }
+  .bhm-about-single .bhm-about-single-content {
+    font-family: "Lora", serif; }
+  .bhm-about-single .bhm-icon-size {
+    width: 50px;
+    padding-bottom: 30px; }
+
+.bhm-values {
+  padding-top: 25px; }
+  .bhm-values .core-values {
+    text-align: center;
+    width: 60%;
+    font-family: "Lora", serif; }
+
+.team-wrapper {
+  width: 80%;
+  margin: auto; }
+  .team-wrapper .team-single {
+    width: 31%;
+    text-align: center; }
+    .team-wrapper .team-single .team-name {
+      font-weight: 700;
+      font-size: 20px;
+      padding: 15px 0 5px; }
 
 /*--------------------------------------------------------------
 # Navigation

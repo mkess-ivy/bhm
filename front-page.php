@@ -36,7 +36,7 @@ get_header();
 
 		<div class="bhm-wrapper">
 			<section class="bhm-welcome">
-				<div class="section-title">
+				<div class="section-title initial-title">
 					<div class="section-title-text"><?php the_field('welcome-home-title'); ?></div>
 					<div class="section-title-bottom"></div>
 				</div>
@@ -58,48 +58,63 @@ get_header();
 				</div>
 			</div>
 		</section>
-		<section class="section-programs">
-			<div class="section-title">Our Programs</div>
-			<div class="programs-content">
-				BHMHS provides support to parents by partnering with several local nonprofits, after school programs, camps, recreation centers, and mentoring programs that focus on at-risk youth and adults.  We provide Psychiatric Rehabilitation Programs (PRP) that are designed to redirect and inspire our clients to devote their time and energy toward meaningful activities such as community service, conflict resolution, anti-bullying and positive social skills.
-			</div>
-			<div class="programs-grid">
-				<div class="programs-single">
-					<div class="programs-single-title">Adult PRP</div>
-					<div class="programs-single-content">Serving adults that experience disorders, trauma, or depression.  Providing resources to strengthen families and communities</div>
-
+		<div class="bhm-wrapper">
+			<section class="section-programs">
+				<div class="section-title">
+					<div class="section-title-text"><?php the_field('programs-title'); ?></div>
+					<div class="section-title-bottom"></div>
 				</div>
-				<div class="programs-single">
-					<div class="programs-single-title">Youth PRP</div>
-					<div class="programs-single-content">Serving youth that experience behavioral issues related to family, environment or socio-economic factors</div>
-
+				<div class="programs-content section-body">
+					<?php the_field('programs-content'); ?>
 				</div>
-				<div class="programs-single">
-					<div class="programs-single-title">Therapy</div>
-					<div class="programs-single-content">Providing group and one-one therapy services related to family, mental health and communication skills building</div>
-
+				<div class="programs-grid">
+					<div class="frow justify-between">
+						<div class="programs-single">
+							<div class="programs-single-title"><?php the_field('first-program-title'); ?></div>
+							<div class="programs-single-content"><?php the_field('first-program-content'); ?></div>
+						</div>
+						<div class="programs-single">
+							<div class="programs-single-title"><?php the_field('second-program-title'); ?></div>
+							<div class="programs-single-content"><?php the_field('second-program-content') ?></div>
+						</div>
+						<div class="programs-single">
+							<div class="programs-single-title"><?php the_field('third-program-title'); ?></div>
+							<div class="programs-single-content"><?php the_field('third-program-content'); ?></div>
+						</div>
+						<div class="programs-single">
+							<div class="programs-single-title"><?php the_field('fourth-program-title'); ?></div>
+							<div class="programs-single-content"><?php the_field('fourth-program-content'); ?></div>
+						</div>
+					</div>
 				</div>
-				<div class="programs-single">
-					<div class="programs-single-title">Medication Management</div>
-					<div class="programs-single-content">Involves treatment planning, symptoms management and medication management</div>
-
-				</div>
-			</div>
-		</section>
+			</section>
+		</div>
+		
 		<section class="section-testimonials">
-			<div class="testimonials-content">70% of the adult population experience traumatic events at least once during their lifetime. Want to speak with someone on our team?</div>
-			<a class="bhm-btn-base"><div>New Client Form</div></a>
-		</section>
-		<section class="section-partners">
-			<div class="partners-content">
-				<div class="partners-single">univ md logo</div>
-				<div class="partners-single">univ md logo</div>
-				<div class="partners-single">univ md logo</div>
-				<div class="partners-single">univ md logo</div>
-				<div class="partners-single">univ md logo</div>
-				<div class="partners-single">univ md logo</div>
+			<div class="section-testimonials-bg" style="background-image: url(<?php the_field('home-testimonial-img'); ?>);">
+				<div class="testimonials-content"><?php the_field('home-testimonial-msg');?></div>
+				<a class="bhm-btn-base" href="<?php echo the_field('home-testimonial-link'); ?>" target="_blank"><div><?php the_field('home-testimonial-link-title'); ?></div></a>
 			</div>
 		</section>
+		
+		<div class="bhm-wrapper">
+			<section class="section-partners">
+				<div class="section-title">
+					<div class="section-title-text"><?php the_field('partners-title'); ?></div>
+					<div class="section-title-bottom"></div>
+				</div>
+				<div class="partners-content">
+					
+					<div class="frow justify-between">
+						<div class="partners-single"><img src="<?php the_field('partner-logo-one'); ?>" /></div>
+						<div class="partners-single"><img src="<?php the_field('partner-logo-two'); ?>" /></div>
+						<div class="partners-single"><img src="<?php the_field('partner-logo-three'); ?>" /></div>
+						<div class="partners-single"><img src="<?php the_field('partner-logo-four'); ?>" /></div>
+						<div class="partners-single"><img src="<?php the_field('partner-logo-five'); ?>" /></div>
+					</div>
+				</div>
+			</section>
+		</div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

@@ -1,0 +1,38 @@
+// Template Classes
+.bhm-welcome {
+    text-align: center;
+  
+    .accred-logo {
+      padding-bottom: 40px;
+    }
+}
+
+// Programs - Home
+.section-programs {
+    // padding-top: 75px;
+    text-align: center;
+  
+    .programs-grid {
+      padding: 60px 0 0;
+    }
+  
+    .programs-single {
+      width: 24.3%;
+      margin: 0 2px;
+      background: $dark-red;
+      color: $white;
+      padding: 20px 10px;
+    }
+  
+    .programs-single-title {
+      padding: 10px 0 20px;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      font-weight: $bold;
+    }
+  
+    .programs-single-content {
+      font-size: 0.9rem;
+      font-family: $body-font;
+    }
+}

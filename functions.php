@@ -155,3 +155,15 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+/**
+ * Add WP Options Page via ACF Pro
+ */
+
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page();
+	acf_add_options_sub_page('Header');
+	acf_add_options_sub_page('Footer');
+
+}

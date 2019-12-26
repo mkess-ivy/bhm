@@ -1,0 +1,43 @@
+.bhm-about-single {
+    width: 31%;
+    text-align: center;
+
+    .bhm-about-single-title {
+        text-transform: uppercase;
+        font-weight: $bold;
+        font-size: 20px;
+        padding-bottom: 30px;
+    }
+    .bhm-about-single-content {
+        font-family: $body-font;
+    }
+    .bhm-icon-size {
+        width: 50px;
+        padding-bottom: 30px;
+    }
+}
+.bhm-values {
+    padding-top: 25px; 
+    
+    .core-values {
+        text-align: center;
+        width: 60%;
+        font-family: $body-font;
+    }
+}
+
+.team-wrapper {
+    width: 80%;
+    margin: auto;
+
+    .team-single {
+        width: 31%;
+        text-align: center;
+    
+        .team-name {
+            font-weight: $bold;
+            font-size: 20px;
+            padding: 15px 0 5px;
+        }
+    }
+}

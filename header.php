@@ -26,13 +26,10 @@
 	<div class="main-page">
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'bhm' ); ?></a>
 
-		<?php
-			$bhm_logo = get_field('bhm_logo');
-		?>
 		<header id="masthead" class="site-header inner">
 			<div class="site-branding">
 				<div class="site-logo">
-					<img src="<?php echo get_field('bhm_logo')['url'] ?>" class="site-logo-img" />
+					<img src="<?php echo get_field('bhm_logo', 'option')['url'] ?>" class="site-logo-img" />
 				</div><!-- .site-logo -->
 			</div><!-- .site-branding -->
 
