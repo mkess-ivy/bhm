@@ -97,24 +97,26 @@ get_header();
 			</div>
 		</section>
 		
-		<div class="bhm-wrapper">
-			<section class="section-partners">
+		
+		<section class="section-partners">
+			<div class="bhm-wrapper">
 				<div class="section-title">
-					<div class="section-title-text"><?php the_field('partners-title'); ?></div>
+					<div class="section-title-text"><?php the_field('partners-title', 'option'); ?></div>
 					<div class="section-title-bottom"></div>
 				</div>
 				<div class="partners-content">
 					
 					<div class="frow justify-between">
-						<div class="partners-single"><img src="<?php the_field('partner-logo-one'); ?>" /></div>
-						<div class="partners-single"><img src="<?php the_field('partner-logo-two'); ?>" /></div>
-						<div class="partners-single"><img src="<?php the_field('partner-logo-three'); ?>" /></div>
-						<div class="partners-single"><img src="<?php the_field('partner-logo-four'); ?>" /></div>
-						<div class="partners-single"><img src="<?php the_field('partner-logo-five'); ?>" /></div>
+						<div class="partners-single"><img src="<?php echo get_field('partner-logo-one', 'option')['url'] ?>" class="partner-logo-img" /></div>
+						<div class="partners-single"><img src="<?php echo get_field('partner-logo-two', 'option')['url'] ?>" class="partner-logo-img" /></div>
+						<div class="partners-single"><img src="<?php echo get_field('partner-logo-three', 'option')['url'] ?>" class="partner-logo-img" /></div>
+						<div class="partners-single"><img src="<?php echo get_field('partner-logo-four', 'option')['url'] ?>" class="partner-logo-img" /></div>
+						<div class="partners-single"><img src="<?php echo get_field('partner-logo-five', 'option')['url'] ?>" class="partner-logo-img" /></div>
 					</div>
 				</div>
-			</section>
-		</div>
+			</div>
+		</section>
+		
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

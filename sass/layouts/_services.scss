@@ -1,0 +1,64 @@
+.bhm-programs {
+    text-align: center;
+    .programs-wrapper {
+        padding-top: 75px;
+    }
+    .programs-single {
+        width: 23%;
+        // padding: 0 15px;
+        // text-align: center;
+        .programs-icon {
+            padding-bottom: 25px;
+        }
+        .programs-title {
+            text-transform: uppercase;
+            font-weight: $bold;
+            font-size: 18px;
+            // padding-bottom: 20px;
+            min-height: 60px;
+            margin-bottom: 15px;
+        }
+    }
+}
+.section-services {
+    text-align: center;
+
+    .services-wrapper {
+        padding: 75px 0;
+    }
+    .services-single {
+        width: 30%;
+    }
+    .services-icon {
+        padding-bottom: 25px;
+    }
+    .services-icon-size {
+        width: 60px;
+    }
+    .services-title {
+        font-weight: $bold;
+        text-transform: uppercase;
+        padding-bottom: 15px;
+        font-size: 18px;
+    }
+}
+
+.eligibility-wrapper {
+    .eligibility-list {
+        padding-top: 25px;
+        li {
+            list-style: none;
+            font-family: $body-font;
+            padding-bottom: 10px;
+            font-size: 18px;
+
+            span {
+                padding-right: 10px;
+            }
+        }
+    }
+}
+
+.client-highlight-img {
+    min-height: 45vh;
+}

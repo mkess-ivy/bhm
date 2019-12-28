@@ -559,8 +559,10 @@ object {
     border-top: 3px solid #EE534F; }
 
 .section-body {
-  width: 75%;
-  margin: auto; }
+  width: 65%;
+  margin: auto;
+  font-family: "Lora", serif;
+  font-size: 20px; }
 
 .section-highlight .highlight-img {
   width: 50%;
@@ -583,15 +585,19 @@ object {
     width: 75px;
     border-top: 3px solid #fff; }
 .section-highlight .highlight-copy {
-  font-family: "Lora", serif; }
+  font-family: "Lora", serif;
+  text-align: center; }
+  .section-highlight .highlight-copy .highlight-author {
+    padding-top: 15px;
+    font-size: 16px; }
 
 .section-testimonials-bg {
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  height: 40vh;
-  text-align: center; }
+  text-align: center;
+  padding: 75px 0; }
   .section-testimonials-bg .testimonials-content {
     font-size: 30px;
     color: #fff;
@@ -600,23 +606,36 @@ object {
     line-height: 1.2;
     width: 70%;
     margin: auto;
-    padding: 3em 0 1.5em; }
+    padding: 0 0 1.5em; }
   .section-testimonials-bg .testimonials-author {
     color: #fff;
     font-size: 22px;
     font-weight: bold; }
+  .section-testimonials-bg .testimonials-readmore {
+    color: #fff;
+    font-size: 24px;
+    width: 75%;
+    margin: auto;
+    padding-bottom: 30px; }
 
 .partners-single {
   width: 160px; }
+  .partners-single .partner-logo-img {
+    width: 150px; }
 
 .bhm-btn-base div {
   background: #96120E;
   width: auto;
   display: inline-block;
-  padding: 10px 15px;
+  padding: 15px 30px;
   color: #fff;
   text-transform: uppercase;
   font-weight: 700; }
+
+.forms-wrapper {
+  padding-top: 75px;
+  width: 75%;
+  margin: auto; }
 
 .bhm-welcome {
   text-align: center; }
@@ -673,6 +692,50 @@ object {
       font-weight: 700;
       font-size: 20px;
       padding: 15px 0 5px; }
+
+.bhm-programs {
+  text-align: center; }
+  .bhm-programs .programs-wrapper {
+    padding-top: 75px; }
+  .bhm-programs .programs-single {
+    width: 23%; }
+    .bhm-programs .programs-single .programs-icon {
+      padding-bottom: 25px; }
+    .bhm-programs .programs-single .programs-title {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 18px;
+      min-height: 60px;
+      margin-bottom: 15px; }
+
+.section-services {
+  text-align: center; }
+  .section-services .services-wrapper {
+    padding: 75px 0; }
+  .section-services .services-single {
+    width: 30%; }
+  .section-services .services-icon {
+    padding-bottom: 25px; }
+  .section-services .services-icon-size {
+    width: 60px; }
+  .section-services .services-title {
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+    font-size: 18px; }
+
+.eligibility-wrapper .eligibility-list {
+  padding-top: 25px; }
+  .eligibility-wrapper .eligibility-list li {
+    list-style: none;
+    font-family: "Lora", serif;
+    padding-bottom: 10px;
+    font-size: 18px; }
+    .eligibility-wrapper .eligibility-list li span {
+      padding-right: 10px; }
+
+.client-highlight-img {
+  min-height: 45vh; }
 
 /*--------------------------------------------------------------
 # Navigation
