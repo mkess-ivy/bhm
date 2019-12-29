@@ -78,7 +78,7 @@ get_header();
 
 		<section class="section-testimonials">
 			<div class="section-testimonials-bg" style="background-image: url(<?php the_field('services-testimonial-img'); ?>);">
-				<div class="bhm-wrapper">
+				<div class="bhm-wrapper-testimonial">
 					<div class="testimonials-content"><?php the_field('services-testimonial-content'); ?></div>
 					<div class="testimonials-readmore"><?php the_field('services-testimonial-readmore'); ?></div>
 					<a class="bhm-btn-base" href="<?php echo the_field('services-testimonial-link'); ?>" target="_blank"><div><?php the_field('services-testimonial-link-title'); ?></div></a>

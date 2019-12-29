@@ -522,13 +522,22 @@ object {
 .bhm-wrapper {
   padding: 0 75px 75px; }
 
+.bhm-wrapper-testimonials {
+  padding: 0 75px; }
+
 .site-logo {
   text-align: center;
   padding: 20px 0; }
   .site-logo .site-logo-img {
     width: 225px; }
 
-.entry-title {
+#post-14 .entry-title,
+#post-2 .entry-title,
+#post-22 .entry-title,
+#post-28 .entry-title,
+#post-24 .entry-title,
+#post-30 .entry-title,
+#post-313 .entry-title {
   display: none; }
 
 .slide-title {
@@ -613,8 +622,8 @@ object {
     font-weight: bold; }
   .section-testimonials-bg .testimonials-readmore {
     color: #fff;
-    font-size: 24px;
-    width: 75%;
+    font-size: 22px;
+    width: 65%;
     margin: auto;
     padding-bottom: 30px; }
 
@@ -736,6 +745,58 @@ object {
 
 .client-highlight-img {
   min-height: 45vh; }
+
+.events-single {
+  width: 31%; }
+  .events-single .events-meta {
+    padding: 20px 0; }
+  .events-single .events-title {
+    font-weight: 700;
+    font-size: 18px;
+    padding-bottom: 10px; }
+  .events-single .events-date {
+    padding-bottom: 7px; }
+  .events-single .date-icon,
+  .events-single .add-icon {
+    width: 15px;
+    display: inline-block; }
+  .events-single .events-address {
+    padding-bottom: 15px; }
+  .events-single a div {
+    padding: 10px 15px;
+    border: 1px solid;
+    display: inline-block;
+    color: #96120E;
+    letter-spacing: 0.5px; }
+
+.gallery-img {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 30vh; }
+  .gallery-img.single {
+    width: 33.33%; }
+  .gallery-img::after {
+    background: rgba(0, 0, 0, 0); }
+
+.wpsisac-slick-slider.design-2 .slick-image-slide .slide-wrap .slider-overlay {
+  background: rgba(0, 0, 0, 0) !important; }
+
+.gallery-title {
+  color: #fff;
+  font-size: 24px;
+  width: 80%;
+  text-align: center;
+  padding-bottom: 20px; }
+
+.gallery-cta {
+  color: #fff;
+  text-align: center;
+  font-size: 13px;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  border: 1px solid; }
 
 /*--------------------------------------------------------------
 # Navigation

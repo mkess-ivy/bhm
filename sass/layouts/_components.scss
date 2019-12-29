@@ -2,6 +2,9 @@
 .bhm-wrapper {
   padding: 0 75px 75px;
 }
+.bhm-wrapper-testimonials {
+  padding: 0 75px;
+}
 // Global
 .site-logo {
   text-align: center;
@@ -13,7 +16,13 @@
 }
 
 // Home Page
-.entry-title {
+#post-14 .entry-title,
+#post-2 .entry-title,
+#post-22 .entry-title,
+#post-28 .entry-title,
+#post-24 .entry-title,
+#post-30 .entry-title,
+#post-313 .entry-title {
   display: none;
 }
 
@@ -132,8 +141,8 @@
 
   .testimonials-readmore {
     color: $white;
-    font-size: 24px;
-    width: 75%;
+    font-size: 22px;
+    width: 65%;
     margin: auto;
     padding-bottom: 30px;
   }

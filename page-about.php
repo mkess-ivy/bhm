@@ -77,7 +77,7 @@ get_header();
 
 		<section class="section-testimonials">
 			<div class="section-testimonials-bg" style="background-image: url(<?php the_field('about-testimonial-img'); ?>);">
-				<div class="bhm-wrapper">
+				<div class="bhm-wrapper-testimonial">
 					<div class="testimonials-content"><?php the_field('about-testimonial-content'); ?></div>
 					<div class="testimonials-author"><?php the_field('about-testimonial-author'); ?></div>
 				</div>
