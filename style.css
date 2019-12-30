@@ -537,7 +537,8 @@ object {
 #post-28 .entry-title,
 #post-24 .entry-title,
 #post-30 .entry-title,
-#post-313 .entry-title {
+#post-313 .entry-title,
+#post-26 .entry-title {
   display: none; }
 
 .slide-title {
@@ -836,6 +837,53 @@ object {
     text-decoration: none; }
     .contact-details-info a:hover {
       text-decoration: none; }
+
+.faqs-wrapper {
+  width: 85%;
+  margin: auto;
+  padding: 75px 0 0;
+  text-align: center; }
+  .faqs-wrapper .faq-single {
+    border-bottom: 1px solid #96120E;
+    padding: 30px 0; }
+    .faqs-wrapper .faq-single:last-child {
+      border-bottom: none; }
+    .faqs-wrapper .faq-single .faq-question {
+      font-weight: 700;
+      font-size: 22px;
+      padding-bottom: 5px; }
+    .faqs-wrapper .faq-single .faq-answer {
+      font-size: 20px; }
+
+.ep-wrapper {
+  padding-top: 75px;
+  width: 75%;
+  margin: auto; }
+  .ep-wrapper .single-ep {
+    width: 31%;
+    padding-bottom: 50px; }
+    .ep-wrapper .single-ep .ep-title {
+      text-align: center;
+      padding: 22px 0;
+      background-color: #96120E;
+      color: #fff; }
+    .ep-wrapper .single-ep .ep-meta {
+      border: 1px solid #96120E;
+      padding: 20px;
+      text-align: center; }
+      .ep-wrapper .single-ep .ep-meta .ep-time {
+        font-weight: 700;
+        padding-bottom: 10px; }
+      .ep-wrapper .single-ep .ep-meta .ep-description {
+        font-size: 14px;
+        padding-bottom: 25px; }
+      .ep-wrapper .single-ep .ep-meta .ep-link {
+        display: inline-block;
+        padding: 6px 20px;
+        border: 1px solid;
+        color: #96120E;
+        font-size: 14px;
+        text-transform: uppercase; }
 
 /*--------------------------------------------------------------
 # Navigation
