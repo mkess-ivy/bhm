@@ -520,7 +520,7 @@ object {
 # Layouts - Components
 --------------------------------------------------------------*/
 .bhm-wrapper {
-  padding: 0 75px 75px; }
+  padding: 0 75px 120px; }
 
 .bhm-wrapper-testimonials {
   padding: 0 75px; }
@@ -607,7 +607,7 @@ object {
   background-repeat: no-repeat;
   background-position: center center;
   text-align: center;
-  padding: 75px 0; }
+  padding: 120px 0; }
   .section-testimonials-bg .testimonials-content {
     font-size: 30px;
     color: #fff;
@@ -798,6 +798,44 @@ object {
   padding: 10px 15px;
   text-transform: uppercase;
   border: 1px solid; }
+
+.contact-info-wrapper {
+  width: 85%;
+  margin: auto;
+  padding: 75px 0 0; }
+
+.contact-icon {
+  text-align: center;
+  padding-bottom: 20px; }
+
+.contact-description {
+  text-align: center; }
+
+.contact-details-img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 65%;
+  height: 50vh; }
+
+.contact-details-info {
+  width: 35%; }
+  .contact-details-info .contact-details-title {
+    font-weight: 700;
+    font-size: 24px;
+    padding-bottom: 40px; }
+  .contact-details-info .contact-details-add {
+    padding-bottom: 40px; }
+  .contact-details-info .contact-details-cta {
+    background-color: #96120E;
+    padding: 14px 24px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px; }
+  .contact-details-info a {
+    text-decoration: none; }
+    .contact-details-info a:hover {
+      text-decoration: none; }
 
 /*--------------------------------------------------------------
 # Navigation

@@ -46,7 +46,7 @@ get_header();
 					$i = 0;
 					?>
 					
-					<div class="events-wrapper">
+					<div class="contact-info-wrapper">
 						<div class="frow justify-between">
 							<?php while( have_rows('contact-info') ): the_row(); 
 
@@ -58,43 +58,20 @@ get_header();
 							}
 
 							// vars
-							$image = get_sub_field('event-img');
-							$title = get_sub_field('event-title');
-							$date = get_sub_field('event-date');
-							$time = get_sub_field('event-time');
-							$address = get_sub_field('event-address');
-							$description = get_sub_field('event-description');
-							$link = get_sub_field('event-link');
+							$icon = get_sub_field('contact-icon');
+							$link = get_sub_field('contact-link');
+							$description = get_sub_field('contact-text');
+							
 
 							?>
 
-							<div class="events-single">
-								<div class="events-img">
-									<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
+							<div class="contact-info-single">
+								<div class="contact-icon">
+									<a href="<?php echo $link; ?>"><img src="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt'] ?>" /></a>
 								</div>
-								<div class="events-meta">
-									<div class="events-title"><?php echo $title; ?></div>
-									<div class="events-date">
-										<span class="date-icon">
-											<img src="<?php echo get_field('event-calendar-icon')['url']; ?>" />
-										</span>&nbsp;&nbsp;
-										<?php echo $date; ?> @ <span class="time">
-											<?php echo $time; ?>
-										</span>
-									</div>
-									<div class="events-address">
-										<span class="add-icon">
-											<img src="<?php echo get_field('event-address-icon')['url']; ?>" />
-										</span>&nbsp;&nbsp;
-										<?php echo $address; ?>
-									</div>
-									<div class="events-description">
-										<?php echo $description; ?>
-									</div>
+								<div class="contact-description">
+									<?php echo $description; ?>
 								</div>
-								<a href="<?php echo $link; ?>">
-									<div>RSVP</div>
-								</a>
 							</div>
 
 							<?php endwhile; ?>
@@ -105,11 +82,11 @@ get_header();
 		</section>
 
 		<section class="section-testimonials">
-			<div class="section-testimonials-bg" style="background-image: url(<?php the_field('services-testimonial-img'); ?>);">
+			<div class="section-testimonials-bg" style="background-image: url(<?php the_field('contact-testimonial-img'); ?>);">
 				<div class="bhm-wrapper-testimonial">
-					<div class="testimonials-content"><?php the_field('services-testimonial-content'); ?></div>
-					<div class="testimonials-readmore"><?php the_field('services-testimonial-readmore'); ?></div>
-					<a class="bhm-btn-base" href="<?php echo the_field('services-testimonial-link'); ?>" target="_blank"><div><?php the_field('services-testimonial-link-title'); ?></div></a>
+					<div class="testimonials-content"><?php the_field('contact-testimonial-content'); ?></div>
+					<div class="testimonials-readmore"><?php the_field('contact-testimonial-readmore'); ?></div>
+					<a class="bhm-btn-base" href="<?php echo the_field('contact-testimonial-link'); ?>" target="_blank"><div><?php the_field('contact-testimonial-link-title'); ?></div></a>
 				</div>
 			</div>
 		</section>
@@ -139,7 +116,24 @@ get_header();
 			</div>
 		</section>
 		
-		
+		<section class="contact-details">
+			<div class="frow justify-between">
+				<div class="contact-details-img" style="background-image:url(<?php the_field('contact-details-img'); ?>);"></div>
+				<div class="contact-details-info">
+					<div class="frow centered-column">
+						<div class="contact-details-title"><?php the_field('contact-details-title'); ?></div>
+						<div class="contact-details-add">
+							<?php the_field('contact-details-address'); ?>
+						</div>
+						<a href="<?php echo the_field('contact-details-link'); ?>" target="_blank">
+							<div class="contact-details-cta">
+								<?php the_field('contact-details-link-title'); ?>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
 		
 
 		</main><!-- #main -->

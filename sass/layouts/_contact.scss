@@ -1,0 +1,46 @@
+.contact-info-wrapper {
+    width: 85%;
+    margin: auto;
+    padding: 75px 0 0;
+}
+.contact-icon {
+    text-align: center;
+    padding-bottom: 20px;
+}
+.contact-description {
+    text-align: center;
+}
+.contact-details-img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 65%;
+    height: 50vh;
+}
+.contact-details-info {
+    width: 35%;
+
+    .contact-details-title {
+        font-weight: $bold;
+        font-size: 24px;
+        padding-bottom: 40px;
+    }
+    .contact-details-add {
+        padding-bottom: 40px;
+    }
+    .contact-details-cta {
+        background-color: $dark-red;
+        padding: 14px 24px;
+        color: $white;
+        text-transform: uppercase;
+        font-size: 14px;
+        
+    }
+    a {
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
