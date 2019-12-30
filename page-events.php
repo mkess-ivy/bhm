@@ -10,8 +10,8 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 			
-			<div id="wrap-page">
-				<div class="one">
+			<div class="wrap-page">
+				<section class="event-section">
 					<?php if ( have_posts() ) : while ( have_posts() ) : the_post();     get_template_part( 'template-parts/content', 'page' );
 					 
 						endwhile; // End of the loop.
@@ -84,8 +84,8 @@ get_header();
 							</div>
 						<?php endif; ?>
 					</div>
-				</div>
-				<div class="two">
+				</section>
+				<section class="gallery-wrapper">
 					
 					<div class="frow justify-between">
 						<?php query_posts(array('post_type' => 'post','orderby' => 'date'));
@@ -110,7 +110,7 @@ get_header();
 						
 
 					<?php endif; wp_reset_query(); ?>
-				</div>
+				</section>
 				<section class="section-testimonials">
 					<div class="section-testimonials-bg" style="background-image: url(<?php the_field('events-testimonial-img'); ?>);">
 						<div class="bhm-wrapper-testimonial">
