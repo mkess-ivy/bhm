@@ -19,7 +19,7 @@ get_header();
 					 ?>
 					
 					<div class="bhm-wrapper">
-						<div class="section-title">
+						<div class="section-title initial-title">
 							<div class="section-title-text"><?php the_field('section-events-title'); ?></div>
 							<div class="section-title-bottom"></div>
 						</div>
@@ -113,10 +113,10 @@ get_header();
 				</section>
 				<section class="section-testimonials">
 					<div class="section-testimonials-bg" style="background-image: url(<?php the_field('events-testimonial-img'); ?>);">
-						<div class="bhm-wrapper-testimonial">
+						
 							<div class="testimonials-content"><?php the_field('events-testimonial-content'); ?></div>
 							<div class="testimonials-author">&ndash;&nbsp;<?php the_field('events-testimonial-author'); ?></div>
-						</div>
+						
 					</div>
 				</section>
 				

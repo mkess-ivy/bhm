@@ -1,17 +1,54 @@
+@import "../mixins/media_queries";
+
 // Wrapper
 .bhm-wrapper {
-  padding: 0 75px 120px;
+  padding: 0 25px 75px;
+
+  @include phone-large {
+    padding: 0 50px 75px;
+  }
+  @include laptop {
+    // padding: 0 100px 120px;
+    padding: 0 60px 100px;
+  }
+  @include desktop {
+    padding: 0 100px 100px;
+  }
 }
 .bhm-wrapper-testimonials {
-  padding: 0 75px;
+  padding: 0 20px;
+
+  @include phone-large {
+    padding: 0 50px 75px;
+  }
+
+  @include laptop {
+    padding: 0 75px;
+  }
 }
 // Global
 .site-logo {
   text-align: center;
-  padding: 20px 0;
+  padding: 20px 0 0;
+  
+  @include laptop {
+    padding: 20px 0;
+  }
 
   .site-logo-img {
-    width: 225px;
+    width: 150px;
+
+    @include laptop {
+      width: 225px;
+      
+    }
+  }
+}
+.accred-logo-img {
+  width: 110px;
+
+  @include laptop {
+    width: auto;
   }
 }
 
@@ -29,9 +66,24 @@
 
 // Slides
 .slide-title {
-  font-size: 55px !important;
+  // font-size: 26px !important;
+  font-size: 32px !important;
   text-transform: uppercase;
   line-height: 1 !important;
+
+  @include phone-large {
+    font-size: 38px !important;
+  }
+  @include tablet {
+    font-size: 40px !important;
+  }
+
+  @include laptop {
+    font-size: 55px !important;
+  }
+  @include desktop {
+    font-size: 65px !important;
+  }
 }
 
 .slick-slider-short-content {
@@ -39,26 +91,50 @@
   color: $red;
 
   p {
-    font-size: 45px !important;
     color: $red !important;
     margin: 0;
-    text-transform: uppercase;
+    // text-transform: uppercase;
+    font-size: 24px !important;
+    line-height: 26px;
+    
+    @include phone-large {
+      font-size: 28px !important;
+    }
+    @include tablet {
+      font-size: 28px !important;
+    }
+
+    @include laptop {
+      font-size: 45px !important;
+      line-height: 45px;
+    }
   }
 }
 
 // Section Title
 .section-title {
-  padding: 75px 0;
+  padding: 75px 0 50px;
   text-align: center;
 
+  @include laptop {
+    padding: 75px 0;
+  }
+
   &.initial-title {
-    padding-top: 0;
+    padding-top: 25px;
+
+    @include phone-large {
+      padding-top: 50px;
+    }
   }
 
   .section-title-text {
-    font-size: 32px;
-    // text-transform: uppercase;
     font-weight: $bold;
+    font-size: 24px;
+
+    @include laptop {
+      font-size: 32px;
+    }
   }
   .section-title-bottom {
     margin: 7px auto 0;
@@ -67,26 +143,56 @@
   }
 }
 .section-body {
-  width: 65%;
+  width: 100%;
   margin: auto;
   font-family: $body-font;
-  font-size: 20px;
+  // font-size: 18px;
   text-align: center;
+
+  @include tablet {
+    width: 80%;
+  }
+  @include laptop {
+    // width: 65%;
+    font-size: 20px;
+  }
 }
 
 // Highlights
 .section-highlight {
   .highlight-img {
-    width: 50%;
+    width: 100%;
+    height: 40vh;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+
+    @include laptop {
+      width: 50%;
+      height: auto;
+    }
   }
   .highlight-content {
-    width: 50%;
+    width: 100%;
     background-color: $dark-red;
     color: $white;
-    padding: 75px 100px;
+    padding: 50px 25px;
+    // font-size: 18px;
+
+    @include phone-large {
+      padding: 50px 50px;  
+    }
+
+    @include tablet {
+      padding: 75px;
+    }
+
+    @include laptop {
+      width: 50%;
+      // padding: 75px 100px;
+      padding: 75px 50px;
+
+    }
   }
   
   .highlight-title {
@@ -106,6 +212,12 @@
   .highlight-copy {
     font-family: $body-font;
     text-align: center;
+    // color: purple;
+
+    @include tablet {
+      width: 85%;
+      margin: auto;
+    }
 
     .highlight-author {
       padding-top: 15px;
@@ -122,17 +234,43 @@
   background-position: center center;
   // height: 40vh;
   text-align: center;
-  padding: 120px 0;
+  padding: 120px 25px;
+
+  @include phone-large {
+    padding: 120px 50px;
+  }
+  @include laptop {
+    padding: 120px 75px;
+  }
+  @include desktop {
+    padding: 120px 150px;
+  }
+  @include tv {
+    padding: 120px 225px;
+  }
 
   .testimonials-content {
-    font-size: 30px;
+    font-size: 22px;
     color: $white;
     font-weight: $bold;    
     letter-spacing: 0.7px;
-    line-height: 1.2;
-    width: 70%;
+    line-height: 1.4;
     margin: auto;
     padding: 0 0 1.5em;
+
+    @include phone-large {
+      font-size: 26px;
+    }
+
+    @include laptop {
+      font-size: 30px;
+      line-height: 1.2;
+      width: 85%;
+    }
+    @include desktop {
+      font-size: 34px;
+      width: 75%;
+    }
   }
 
   .testimonials-author {
@@ -143,19 +281,62 @@
 
   .testimonials-readmore {
     color: $white;
-    font-size: 22px;
-    width: 65%;
+    font-size: 18px;
+    // width: 65%;
     margin: auto;
     padding-bottom: 30px;
+
+    @include tablet {
+      font-size: 22px;
+    }
+
+    @include laptop {
+      width: 85%;
+      // width: 65%;
+      font-size: 22px;
+    }
+    @include desktop {
+      width: 70%;
+
+    }
   }
 }
 
 // Partners
 .partners-single {
-  width: 160px;
+  // width: 145px;
+  width: 60%;
+  margin: auto;
+  padding: 0 25px 30px 0;
+
+  @include phone-large {
+    width: 175px;
+    // padding-bottom: 50px;
+  }
+
+  @include small-tablet {
+    width: 170px;
+  }
+
+  @include tablet {
+    width: 130px;
+  }
+
+  @include laptop {
+    width: 170px;
+  }
 
   .partner-logo-img {
-    width: 150px;
+    // width: 130px;
+    width: 100%;
+
+    @include phone-large {
+      // width: 140px;
+    }
+
+    @include laptop {
+      // width: 150px;
+    }
   }
 }
 
@@ -177,4 +358,16 @@
   padding-top: 75px;
   width: 75%;
   margin: auto;
+
+  @include desktop {
+    width: 60%;
+  }
+
+  .forms-single {
+    margin: 0 auto 20px;
+
+    @include laptop {
+      margin: 0;
+    }
+  }
 }

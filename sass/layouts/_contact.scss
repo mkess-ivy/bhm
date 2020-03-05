@@ -1,24 +1,68 @@
 .contact-info-wrapper {
-    width: 85%;
     margin: auto;
     padding: 75px 0 0;
+
+    @include laptop {
+        width: 85%;
+    }
+
+    .contact-info-single {
+        width: 100%;
+        padding-bottom: 50px;
+
+        @include phone-large {
+            padding-bottom: 75px;
+        }
+
+        @include tablet {
+            width: 32%;
+        }
+    }
 }
 .contact-icon {
     text-align: center;
     padding-bottom: 20px;
+
+    img {
+        @include tablet {
+            height: 65px;
+        }
+    }
 }
 .contact-description {
     text-align: center;
+
+    @include tablet {
+        font-size: 14px;
+    }
+    @include desktop-small {
+        font-size: 16px;
+    }
 }
 .contact-details-img {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 65%;
+    width: 100%;
     height: 50vh;
+    margin-bottom: 50px;
+
+    @include laptop {
+        width: 65%;
+    }
+}
+.contact-details {
+    @include desktop-small {
+        padding-top: 7em;
+    }
 }
 .contact-details-info {
-    width: 35%;
+    // width: 35%;
+    margin: 0 auto 75px;
+
+    @include laptop {
+        width: 35%;
+    }
 
     .contact-details-title {
         font-weight: $bold;
@@ -34,7 +78,7 @@
         color: $white;
         text-transform: uppercase;
         font-size: 14px;
-        
+        font-weight: bold;
     }
     a {
         text-decoration: none;

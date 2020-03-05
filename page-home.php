@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Front Page
+ * Template Name: Home Page
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
@@ -15,7 +15,7 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area home">
 		<main id="main" class="site-main">
 
 		
@@ -40,7 +40,7 @@ get_header();
 					<div class="section-title-text"><?php the_field('welcome-home-title'); ?></div>
 					<div class="section-title-bottom"></div>
 				</div>
-				<div class="accred-logo"><img src="<?php echo esc_url(get_field('welcome-home-img')['url']); ?>" /></div>
+				<div class="accred-logo"><img class="accred-logo-img" src="<?php echo esc_url(get_field('welcome-home-img')['url']); ?>" /></div>
 				<div class="section-body">
 				<?php the_field('welcome-home-content'); ?>
 				</div>
@@ -68,24 +68,23 @@ get_header();
 					<?php the_field('programs-content'); ?>
 				</div>
 				<div class="programs-grid">
+					<?php if ( have_rows('home-programs-section') ): ?>
 					<div class="frow justify-between">
+						<?php while ( have_rows('home-programs-section') ): the_row();
+
+							// vars
+
+							$program_title = get_sub_field('program-single-title');
+							$program_content = get_sub_field('program-single-content');
+
+						?>
 						<div class="programs-single">
-							<div class="programs-single-title"><?php the_field('first-program-title'); ?></div>
-							<div class="programs-single-content"><?php the_field('first-program-content'); ?></div>
+							<div class="programs-single-title"><?php echo $program_title; ?></div>
+							<div class="programs-single-content"><?php echo $program_content; ?></div>
 						</div>
-						<div class="programs-single">
-							<div class="programs-single-title"><?php the_field('second-program-title'); ?></div>
-							<div class="programs-single-content"><?php the_field('second-program-content') ?></div>
-						</div>
-						<div class="programs-single">
-							<div class="programs-single-title"><?php the_field('third-program-title'); ?></div>
-							<div class="programs-single-content"><?php the_field('third-program-content'); ?></div>
-						</div>
-						<div class="programs-single">
-							<div class="programs-single-title"><?php the_field('fourth-program-title'); ?></div>
-							<div class="programs-single-content"><?php the_field('fourth-program-content'); ?></div>
-						</div>
+						<?php endwhile; ?>
 					</div>
+					<?php endif; ?>
 				</div>
 			</section>
 		</div>
@@ -106,7 +105,7 @@ get_header();
 				</div>
 				<div class="partners-content">
 					
-					<div class="frow justify-between">
+					<div class="frow justify-start">
 						<div class="partners-single"><img src="<?php echo get_field('partner-logo-one', 'option')['url'] ?>" class="partner-logo-img" /></div>
 						<div class="partners-single"><img src="<?php echo get_field('partner-logo-two', 'option')['url'] ?>" class="partner-logo-img" /></div>
 						<div class="partners-single"><img src="<?php echo get_field('partner-logo-three', 'option')['url'] ?>" class="partner-logo-img" /></div>

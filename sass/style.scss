@@ -78,6 +78,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "layouts/ep";
 
 /*--------------------------------------------------------------
+# Mixins
+--------------------------------------------------------------*/
+@import "mixins/media_queries";
+
+/*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
 @import "navigation/navigation";

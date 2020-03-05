@@ -81,7 +81,6 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   /* 1 */
   height: 0;
@@ -116,7 +115,6 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   /* 2 */ }
 
@@ -249,7 +247,6 @@ fieldset {
  *		`fieldset` elements in all browsers.
  */
 legend {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   color: inherit;
@@ -281,7 +278,6 @@ textarea {
  */
 [type="checkbox"],
 [type="radio"] {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -412,14 +408,12 @@ big {
 # Elements
 --------------------------------------------------------------*/
 html {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 *,
 *:before,
 *:after {
   /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-  -webkit-box-sizing: inherit;
   box-sizing: inherit; }
 
 hr {
@@ -526,21 +520,29 @@ object {
 # Layouts - Components
 --------------------------------------------------------------*/
 .bhm-wrapper {
-  padding: 0 75px 75px; }
+  padding: 0 75px 120px; }
+
+.bhm-wrapper-testimonials {
+  padding: 0 75px; }
 
 .site-logo {
   text-align: center;
-  padding: 35px 0; }
+  padding: 20px 0; }
   .site-logo .site-logo-img {
     width: 225px; }
 
-.page-template-front-page .entry-title {
-  display: none;
-  color: red;
-  font-size: 200px; }
+#post-14 .entry-title,
+#post-2 .entry-title,
+#post-22 .entry-title,
+#post-28 .entry-title,
+#post-24 .entry-title,
+#post-30 .entry-title,
+#post-313 .entry-title,
+#post-26 .entry-title {
+  display: none; }
 
 .slide-title {
-  font-size: 55px !important;
+  font-size: 26px !important;
   text-transform: uppercase;
   line-height: 1 !important; }
 
@@ -553,16 +555,13 @@ object {
     margin: 0;
     text-transform: uppercase; }
 
-.bhm-welcome {
-  text-align: center; }
-  .bhm-welcome .accred-logo {
-    padding-bottom: 40px; }
-
 .section-title {
-  padding-bottom: 75px; }
+  padding: 75px 0;
+  text-align: center; }
+  .section-title.initial-title {
+    padding-top: 0; }
   .section-title .section-title-text {
     font-size: 32px;
-    text-transform: uppercase;
     font-weight: 700; }
   .section-title .section-title-bottom {
     margin: 7px auto 0;
@@ -570,21 +569,22 @@ object {
     border-top: 3px solid #EE534F; }
 
 .section-body {
-  width: 75%;
-  margin: auto; }
+  width: 65%;
+  margin: auto;
+  font-family: "Lora", serif;
+  font-size: 20px;
+  text-align: center; }
 
 .section-highlight .highlight-img {
   width: 50%;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat; }
-
 .section-highlight .highlight-content {
   width: 50%;
   background-color: #96120E;
   color: #fff;
   padding: 75px 100px; }
-
 .section-highlight .highlight-title {
   padding-bottom: 40px; }
   .section-highlight .highlight-title .highlight-title-text {
@@ -595,10 +595,299 @@ object {
     margin: 7px auto 0;
     width: 75px;
     border-top: 3px solid #fff; }
-
 .section-highlight .highlight-copy {
-  font-family: "Lora", serif; }
+  font-family: "Lora", serif;
+  text-align: center; }
+  .section-highlight .highlight-copy .highlight-author {
+    padding-top: 15px;
+    font-size: 16px; }
 
+.section-testimonials-bg {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  text-align: center;
+  padding: 120px 0; }
+  .section-testimonials-bg .testimonials-content {
+    font-size: 30px;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    line-height: 1.2;
+    width: 70%;
+    margin: auto;
+    padding: 0 0 1.5em; }
+  .section-testimonials-bg .testimonials-author {
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold; }
+  .section-testimonials-bg .testimonials-readmore {
+    color: #fff;
+    font-size: 22px;
+    width: 65%;
+    margin: auto;
+    padding-bottom: 30px; }
+
+.partners-single {
+  width: 160px; }
+  .partners-single .partner-logo-img {
+    width: 150px; }
+
+.bhm-btn-base div {
+  background: #96120E;
+  width: auto;
+  display: inline-block;
+  padding: 15px 30px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700; }
+
+.forms-wrapper {
+  padding-top: 75px;
+  width: 75%;
+  margin: auto; }
+
+.bhm-welcome {
+  text-align: center; }
+  .bhm-welcome .accred-logo {
+    padding-bottom: 40px; }
+
+.section-programs {
+  text-align: center; }
+  .section-programs .programs-grid {
+    padding: 60px 0 0; }
+  .section-programs .programs-single {
+    width: 24.3%;
+    margin: 0 2px;
+    background: #96120E;
+    color: #fff;
+    padding: 20px 10px; }
+  .section-programs .programs-single-title {
+    padding: 10px 0 20px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 700; }
+  .section-programs .programs-single-content {
+    font-size: 0.9rem;
+    font-family: "Lora", serif; }
+
+.bhm-about-single {
+  width: 31%;
+  text-align: center; }
+  .bhm-about-single .bhm-about-single-title {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 20px;
+    padding-bottom: 30px; }
+  .bhm-about-single .bhm-about-single-content {
+    font-family: "Lora", serif; }
+  .bhm-about-single .bhm-icon-size {
+    width: 50px;
+    padding-bottom: 30px; }
+
+.bhm-values {
+  padding-top: 25px; }
+  .bhm-values .core-values {
+    text-align: center;
+    width: 60%;
+    font-family: "Lora", serif; }
+
+.team-wrapper {
+  width: 80%;
+  margin: auto; }
+  .team-wrapper .team-single {
+    width: 31%;
+    text-align: center; }
+    .team-wrapper .team-single .team-name {
+      font-weight: 700;
+      font-size: 20px;
+      padding: 15px 0 5px; }
+
+.bhm-programs {
+  text-align: center; }
+  .bhm-programs .programs-wrapper {
+    padding-top: 75px; }
+  .bhm-programs .programs-single {
+    width: 23%; }
+    .bhm-programs .programs-single .programs-icon {
+      padding-bottom: 25px; }
+    .bhm-programs .programs-single .programs-title {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 18px;
+      min-height: 60px;
+      margin-bottom: 15px; }
+
+.section-services {
+  text-align: center; }
+  .section-services .services-wrapper {
+    padding: 75px 0; }
+  .section-services .services-single {
+    width: 30%; }
+  .section-services .services-icon {
+    padding-bottom: 25px; }
+  .section-services .services-icon-size {
+    width: 60px; }
+  .section-services .services-title {
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+    font-size: 18px; }
+
+.eligibility-wrapper .eligibility-list {
+  padding-top: 25px; }
+  .eligibility-wrapper .eligibility-list li {
+    list-style: none;
+    font-family: "Lora", serif;
+    padding-bottom: 10px;
+    font-size: 18px; }
+    .eligibility-wrapper .eligibility-list li span {
+      padding-right: 10px; }
+
+.client-highlight-img {
+  min-height: 45vh; }
+
+.events-single {
+  width: 31%; }
+  .events-single .events-meta {
+    padding: 20px 0; }
+  .events-single .events-title {
+    font-weight: 700;
+    font-size: 18px;
+    padding-bottom: 10px; }
+  .events-single .events-date {
+    padding-bottom: 7px; }
+  .events-single .date-icon,
+  .events-single .add-icon {
+    width: 15px;
+    display: inline-block; }
+  .events-single .events-address {
+    padding-bottom: 15px; }
+  .events-single a div {
+    padding: 10px 15px;
+    border: 1px solid;
+    display: inline-block;
+    color: #96120E;
+    letter-spacing: 0.5px; }
+
+.gallery-img {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 30vh; }
+  .gallery-img.single {
+    width: 33.33%; }
+  .gallery-img::after {
+    background: rgba(0, 0, 0, 0); }
+
+.wpsisac-slick-slider.design-2 .slick-image-slide .slide-wrap .slider-overlay {
+  background: rgba(0, 0, 0, 0) !important; }
+
+.gallery-title {
+  color: #fff;
+  font-size: 24px;
+  width: 80%;
+  text-align: center;
+  padding-bottom: 20px; }
+
+.gallery-cta {
+  color: #fff;
+  text-align: center;
+  font-size: 13px;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  border: 1px solid; }
+
+.contact-info-wrapper {
+  width: 85%;
+  margin: auto;
+  padding: 75px 0 0; }
+
+.contact-icon {
+  text-align: center;
+  padding-bottom: 20px; }
+
+.contact-description {
+  text-align: center; }
+
+.contact-details-img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 65%;
+  height: 50vh; }
+
+.contact-details-info {
+  width: 35%; }
+  .contact-details-info .contact-details-title {
+    font-weight: 700;
+    font-size: 24px;
+    padding-bottom: 40px; }
+  .contact-details-info .contact-details-add {
+    padding-bottom: 40px; }
+  .contact-details-info .contact-details-cta {
+    background-color: #96120E;
+    padding: 14px 24px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px; }
+  .contact-details-info a {
+    text-decoration: none; }
+    .contact-details-info a:hover {
+      text-decoration: none; }
+
+.faqs-wrapper {
+  width: 85%;
+  margin: auto;
+  padding: 75px 0 0;
+  text-align: center; }
+  .faqs-wrapper .faq-single {
+    border-bottom: 1px solid #96120E;
+    padding: 30px 0; }
+    .faqs-wrapper .faq-single:last-child {
+      border-bottom: none; }
+    .faqs-wrapper .faq-single .faq-question {
+      font-weight: 700;
+      font-size: 22px;
+      padding-bottom: 5px; }
+    .faqs-wrapper .faq-single .faq-answer {
+      font-size: 20px; }
+
+.ep-wrapper {
+  padding-top: 75px;
+  width: 75%;
+  margin: auto; }
+  .ep-wrapper .single-ep {
+    width: 31%;
+    padding-bottom: 50px; }
+    .ep-wrapper .single-ep .ep-title {
+      text-align: center;
+      padding: 22px 0;
+      background-color: #96120E;
+      color: #fff; }
+    .ep-wrapper .single-ep .ep-meta {
+      border: 1px solid #96120E;
+      padding: 20px;
+      text-align: center; }
+      .ep-wrapper .single-ep .ep-meta .ep-time {
+        font-weight: 700;
+        padding-bottom: 10px; }
+      .ep-wrapper .single-ep .ep-meta .ep-description {
+        font-size: 14px;
+        padding-bottom: 25px; }
+      .ep-wrapper .single-ep .ep-meta .ep-link {
+        display: inline-block;
+        padding: 6px 20px;
+        border: 1px solid;
+        color: #96120E;
+        font-size: 14px;
+        text-transform: uppercase; }
+
+/*--------------------------------------------------------------
+# Mixins
+--------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -624,7 +913,6 @@ a {
     margin: 0;
     padding-left: 0; }
     .main-navigation ul ul {
-      -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
       float: left;
       position: absolute;
@@ -634,8 +922,7 @@ a {
       .main-navigation ul ul ul {
         left: -999em;
         top: 0; }
-      .main-navigation ul ul li:hover > ul,
-      .main-navigation ul ul li.focus > ul {
+      .main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
         left: 100%; }
       .main-navigation ul ul a {
         width: 200px; }
@@ -663,25 +950,19 @@ a {
 @media screen and (min-width: 37.5em) {
   .menu-toggle {
     display: none; }
+
   .main-navigation ul {
     display: block;
     text-align: center; } }
-
-.site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
-.post-navigation {
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
   margin: 0 0 1.5em;
   overflow: hidden; }
-
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
+.comment-navigation .nav-previous, .posts-navigation .nav-previous, .post-navigation .nav-previous {
   float: left;
   width: 50%; }
-
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
+.comment-navigation .nav-next, .posts-navigation .nav-next, .post-navigation .nav-next {
   float: right;
   text-align: right;
   width: 50%; }
@@ -693,7 +974,6 @@ a {
 .screen-reader-text {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
-  -webkit-clip-path: inset(50%);
   clip-path: inset(50%);
   height: 1px;
   margin: -1px;
@@ -706,10 +986,8 @@ a {
   .screen-reader-text:focus {
     background-color: #f1f1f1;
     border-radius: 3px;
-    -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
-    -webkit-clip-path: none;
     clip-path: none;
     color: #21759b;
     display: block;
@@ -834,3 +1112,5 @@ a {
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
 .infinity-end.neverending .site-footer {
   display: block; }
+
+/*# sourceMappingURL=style.css.map */

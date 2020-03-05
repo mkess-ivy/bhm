@@ -4,9 +4,25 @@
         padding-top: 75px;
     }
     .programs-single {
-        width: 23%;
+        width: 100%;
+        padding-bottom: 75px;
         // padding: 0 15px;
         // text-align: center;
+
+        @include phone-large {
+            padding-bottom: 75px;
+        }
+
+        @include tablet {
+            width: 47%;
+        }
+        @include desktop {
+            width: 25%;
+            padding: 10px;
+        }
+        @include tv {
+            padding: 20px;
+        }
         .programs-icon {
             padding-bottom: 25px;
         }
@@ -17,6 +33,20 @@
             // padding-bottom: 20px;
             min-height: 60px;
             margin-bottom: 15px;
+
+            @include tablet {
+                min-height: 30px;
+            }
+
+        }
+        .programs-content {
+            @include tablet {
+                font-size: 14px;
+            }
+            @include laptop {
+                font-size: 16px;
+            }
+            
         }
     }
 }
@@ -24,10 +54,27 @@
     text-align: center;
 
     .services-wrapper {
-        padding: 75px 0;
+        padding: 75px 0 0;
+
+        // @include small-tablet {
+        //     padding: 125px 0 0;
+        // }
     }
     .services-single {
-        width: 30%;
+        width: 100%;
+        padding-bottom: 75px;
+
+        @include phone-large {
+            padding-bottom: 75px;
+        }
+
+        @include tablet {
+            width: 31%;
+        }
+
+        @include tv {
+            width: 28%;
+        }
     }
     .services-icon {
         padding-bottom: 25px;
@@ -41,11 +88,22 @@
         padding-bottom: 15px;
         font-size: 18px;
     }
+    .services-content {
+        @include tablet {
+            font-size: 14px;
+        }
+    }
 }
 
 .eligibility-wrapper {
     .eligibility-list {
         padding-top: 25px;
+        padding-inline-start: 0;
+
+        @include laptop {
+            padding-inline-start: 40px;
+        }
+
         li {
             list-style: none;
             font-family: $body-font;
@@ -62,3 +120,4 @@
 .client-highlight-img {
     min-height: 45vh;
 }
+

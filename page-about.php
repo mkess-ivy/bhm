@@ -35,33 +35,46 @@ get_header();
 
 		<div class="bhm-wrapper">
 			<section class="bhm-about">
-				<div class="section-title initial-title">
-					<div class="section-title-text"><?php the_field('about-section-title'); ?></div>
-					<div class="section-title-bottom"></div>
-				</div>
-				<div class="frow justify-between">
-					<div class="bhm-about-single">
-						<div class="bhm-icon">
-							<img src="<?php echo get_field('mission-icon')['url'] ?>" class="bhm-icon-size" />
-						</div>
-						<div class="bhm-about-single-title"><?php the_field('mission-title'); ?></div>
-						<div class="bhm-about-single-content"><?php the_field('mission-content'); ?></div>
+				
+
+				<?php if( have_rows ('about-section') ):
+					$i = 0;
+					?>
+
+
+					<div class="section-title initial-title">
+						<div class="section-title-text"><?php the_field('about-section-title'); ?></div>
+						<div class="section-title-bottom"></div>
 					</div>
-					<div class="bhm-about-single">
-						<div class="bhm-icon">
-							<img src="<?php echo get_field('vision-icon')['url'] ?>" class="bhm-icon-size" />
+					
+					<div class="frow justify-between">
+						<?php while( have_rows ('about-section') ): the_row();
+
+						$i++;
+
+						if( $i > 3 )
+						{
+							break;
+						}
+
+						// vars
+						$icon = get_sub_field('about-icon');
+						$title = get_sub_field('about-title');
+						$content = get_sub_field('about-content');
+
+						?>
+
+						<div class="bhm-about-single">
+							<div class="bhm-icon">
+								<img src="<?php echo $icon['url'] ?>" class="bhm-icon-size" />
+							</div>
+							<div class="bhm-about-single-title"><?php echo $title; ?></div>
+							<div class="bhm-about-single-content"><?php echo $content; ?></div>
 						</div>
-						<div class="bhm-about-single-title"><?php the_field('vision-title'); ?></div>
-						<div class="bhm-about-single-content"><?php the_field('vision-content'); ?></div>
+						
+						<?php endwhile; ?>
 					</div>
-					<div class="bhm-about-single">
-						<div class="bhm-icon">
-							<img src="<?php echo get_field('philosophy-icon')['url'] ?>" class="bhm-icon-size" />
-						</div>
-						<div class="bhm-about-single-title"><?php the_field('philosophy-title'); ?></div>
-						<div class="bhm-about-single-content"><?php the_field('philosophy-content'); ?></div>
-					</div>
-				</div>
+				<?php endif; ?>
 			</section>
 
 			<section class="bhm-values">
@@ -77,10 +90,10 @@ get_header();
 
 		<section class="section-testimonials">
 			<div class="section-testimonials-bg" style="background-image: url(<?php the_field('about-testimonial-img'); ?>);">
-				<div class="bhm-wrapper-testimonial">
+				
 					<div class="testimonials-content"><?php the_field('about-testimonial-content'); ?></div>
 					<div class="testimonials-author"><?php the_field('about-testimonial-author'); ?></div>
-				</div>
+				
 			</div>
 		</section>
 
@@ -90,37 +103,32 @@ get_header();
 					<div class="section-title-text"><?php the_field('section-team-title'); ?></div>
 					<div class="section-title-bottom"></div>
 				</div>
+				
+				<?php if ( have_rows('team-member-section') ): ?>
 				<div class="team-wrapper">
 					<div class="frow justify-between">
-						<div class="team-single">
-							<div class="team-image">
-								<img src="<?php echo get_field('team-member1-img')['url'] ?>" />
+						<?php while( have_rows('team-member-section') ): the_row();
+
+							// vars
+							$team_image = get_sub_field('team-member-img');
+							$team_name = get_sub_field('team-member-name');
+							$team_position = get_sub_field('team-member-position');
+
+						?>
+
+							<div class="team-single">
+								<div class="team-image">
+									<img src="<?php echo $team_image['url'] ?>" />
+								</div>
+								<div class="team-meta">
+									<div class="team-name"><?php echo $team_name;?></div>
+									<div class="team-position"><?php echo $team_position;?></div>
+								</div>
 							</div>
-							<div class="team-meta">
-								<div class="team-name"><?php the_field('team-member1-name');?></div>
-								<div class="team-position"><?php the_field('team-member1-position');?></div>
-							</div>
-						</div>
-						<div class="team-single">
-							<div class="team-image">
-								<img src="<?php echo get_field('team-member2-img')['url'] ?>" />
-							</div>
-							<div class="team-meta">
-								<div class="team-name"><?php the_field('team-member2-name');?></div>
-								<div class="team-position"><?php the_field('team-member2-position');?></div>
-							</div>
-						</div>
-						<div class="team-single">
-							<div class="team-image">
-								<img src="<?php echo get_field('team-member3-img')['url'] ?>" />
-							</div>
-							<div class="team-meta">
-								<div class="team-name"><?php the_field('team-member3-name');?></div>
-								<div class="team-position"><?php the_field('team-member3-position');?></div>
-							</div>
-						</div>
+						<?php endwhile; ?>
 					</div>
 				</div>
+				<?php endif; ?>
 			</div>
 		</section>
 

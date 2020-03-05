@@ -1,5 +1,23 @@
+.events-wrapper {
+    @include desktop {
+        width: 80%;
+        margin: auto;
+    }
+}
 .events-single {
-    width: 31%;
+    padding-bottom: 75px;
+
+    @include phone-large {
+        padding-bottom: 75px;
+    }
+
+    @include tablet {
+        width: 48%;
+    }
+
+    @include laptop {
+        width: 31%;
+    }
     .events-meta {
         padding: 20px 0;
     }
@@ -39,8 +57,16 @@
     width: 100%;
     height: 30vh;
 
+    @include phone-large {
+        height: 40vh;
+    }
+
     &.single {
-        width: 33.33%;
+        width: 100%;
+
+        @include laptop {
+            width: 33.33%;
+        }
     }
 
     &::after {

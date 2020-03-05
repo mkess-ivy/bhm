@@ -3,9 +3,25 @@
     width: 75%;
     margin: auto;
 
+    @include small-tablet {
+        width: 100%;
+    }
+
     .single-ep {
-        width: 31%;
+        width: 100%;
         padding-bottom: 50px;
+
+        @include phone-large {
+            padding-bottom: 75px;
+        }
+
+        @include small-tablet {
+            width: 48%;
+        }
+
+        @include laptop {
+            width: 31%;
+        }
 
         .ep-title {
             text-align: center;

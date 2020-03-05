@@ -1,28 +1,47 @@
 .bhm-about-single {
-    width: 31%;
+    width: 100%;
     text-align: center;
+    padding-bottom: 75px;
+
+    @include tablet {
+        width: 31%;
+    }
+
+    @include laptop {
+        width: 31%;
+        padding-bottom: 0;
+    }
 
     .bhm-about-single-title {
         text-transform: uppercase;
         font-weight: $bold;
         font-size: 20px;
         padding-bottom: 30px;
+
+        @include tablet {
+            font-size: 18px;
+        }
     }
     .bhm-about-single-content {
         font-family: $body-font;
     }
     .bhm-icon-size {
-        width: 50px;
+        height: 70px;
         padding-bottom: 30px;
     }
 }
 .bhm-values {
-    padding-top: 25px; 
+    @include laptop {
+        padding-top: 25px; 
+    }
     
     .core-values {
         text-align: center;
-        width: 60%;
         font-family: $body-font;
+
+        @include laptop {
+            // width: 60%;
+        }
     }
 }
 
@@ -30,14 +49,47 @@
     width: 80%;
     margin: auto;
 
+    @include phone-large {
+        width: 70%;
+    }
+
+    @include small-tablet {
+        width: 100%;
+    }
+
+    @include desktop {
+        width: 85%;
+    }
+
     .team-single {
-        width: 31%;
+        width: 100%;
         text-align: center;
+        padding-bottom: 50px;
+
+        @include phone-large {
+            padding-bottom: 75px;
+        }
+
+        @include small-tablet {
+            width: 48%;
+        }
+
+        @include tablet {
+            width: 31%;
+        }
+
+        @include laptop {
+            width: 31%;
+        }
     
         .team-name {
             font-weight: $bold;
             font-size: 20px;
             padding: 15px 0 5px;
+
+            @include small-tablet {
+                font-size: 18px;
+            }
         }
     }
 }

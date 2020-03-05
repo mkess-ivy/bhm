@@ -29,20 +29,21 @@
 		<header id="masthead" class="site-header inner">
 			<div class="site-branding">
 				<div class="site-logo">
-					<img src="<?php echo get_field('bhm_logo', 'option')['url'] ?>" class="site-logo-img" />
+					<a href="/"><img src="<?php echo get_field('bhm_logo', 'option')['url'] ?>" class="site-logo-img" /></a>
 				</div><!-- .site-logo -->
+				<nav id="site-navigation" class="main-navigation">
+					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">&#9776;</button>
+					<?php
+					wp_nav_menu( array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+						'fallback_cb'	 => '__return_false',
+					) );
+					?>
+				</nav><!-- #site-navigation -->
 			</div><!-- .site-branding -->
 
-			<nav id="site-navigation" class="main-navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'bhm' ); ?></button>
-				<?php
-				wp_nav_menu( array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-					'fallback_cb'	 => '__return_false',
-				) );
-				?>
-			</nav><!-- #site-navigation -->
+			
 		</header><!-- #masthead -->
 	</div>
 </div>

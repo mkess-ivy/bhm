@@ -42,47 +42,35 @@ get_header();
 					<?php the_field('section-programs-content'); ?>
 				</div>
 				<div class="programs-wrapper">
+					<?php if ( have_rows('service-program-section') ): ?>
+
 					<div class="frow justify-between">
+						<?php while ( have_rows('service-program-section')): the_row();
+							// vars
+							$program_title = get_sub_field('program-single-title');
+							$program_content = get_sub_field('program-single-content');
+						?>
 						<div class="programs-single">
 							<div class="programs-icon">
 								<img src="<?php echo get_field('programs-icon')['url'] ?>" />
 							</div>
-							<div class="programs-title"><?php the_field('programs1-title'); ?></div>
-							<div class="programs-content"><?php the_field('programs1-content');?></div>
+							<div class="programs-title"><?php echo $program_title; ?></div>
+							<div class="programs-content"><?php echo $program_content;?></div>
 						</div>
-						<div class="programs-single">
-							<div class="programs-icon">
-								<img src="<?php echo get_field('programs-icon')['url'] ?>" />
-							</div>
-							<div class="programs-title"><?php the_field('programs2-title'); ?></div>
-							<div class="programs-content"><?php the_field('programs2-content'); ?></div>
-						</div>
-						<div class="programs-single">
-							<div class="programs-icon">
-								<img src="<?php echo get_field('programs-icon')['url'] ?>" />
-							</div>
-							<div class="programs-title"><?php the_field('programs3-title'); ?></div>
-							<div class="programs-content"><?php the_field('programs3-content'); ?></div>
-						</div>
-						<div class="programs-single">
-							<div class="programs-icon">
-								<img src="<?php echo get_field('programs-icon')['url'] ?>" />
-							</div>
-							<div class="programs-title"><?php the_field('programs4-title'); ?></div>
-							<div class="programs-content"><?php the_field('programs4-content'); ?></div>
-						</div>
+						<?php endwhile; ?>
 					</div>
+					<?php endif; ?>
 				</div>
 			</section>
 		</div>
 
 		<section class="section-testimonials">
 			<div class="section-testimonials-bg" style="background-image: url(<?php the_field('services-testimonial-img'); ?>);">
-				<div class="bhm-wrapper-testimonial">
+				
 					<div class="testimonials-content"><?php the_field('services-testimonial-content'); ?></div>
 					<div class="testimonials-readmore"><?php the_field('services-testimonial-readmore'); ?></div>
 					<a class="bhm-btn-base" href="<?php echo the_field('services-testimonial-link'); ?>" target="_blank"><div><?php the_field('services-testimonial-link-title'); ?></div></a>
-				</div>
+				
 			</div>
 		</section>
 
@@ -96,29 +84,26 @@ get_header();
 					<?php the_field('section-services-content'); ?>
 				</div>
 				<div class="services-wrapper">
+					<?php if (have_rows('services-section')): ?>
 					<div class="frow justify-between">
+						<?php while (have_rows('services-section')): the_row();
+
+						// vars
+						$service_icon = get_sub_field('service-icon');
+						$service_title = get_sub_field('service-title');
+						$service_content = get_sub_field('service-content');
+
+						?>
 						<div class="services-single">
 							<div class="services-icon">
-								<img src="<?php echo get_field('service1-icon')['url'] ?>" class="services-icon-size" />
+								<img src="<?php echo $service_icon['url'] ?>" class="services-icon-size" />
 							</div>
-							<div class="services-title"><?php the_field('service1-title'); ?></div>
-							<div class="services-content"><?php the_field('service1-content'); ?></div>
+							<div class="services-title"><?php echo $service_title; ?></div>
+							<div class="services-content"><?php echo $service_content ?></div>
 						</div>
-						<div class="services-single">
-							<div class="services-icon">
-								<img src="<?php echo get_field('service2-icon')['url'] ?>" class="services-icon-size" />
-							</div>
-							<div class="services-title"><?php the_field('service2-title'); ?></div>
-							<div class="services-content"><?php the_field('service2-content'); ?></div>
-						</div>
-						<div class="services-single">
-							<div class="services-icon">
-								<img src="<?php echo get_field('service3-icon')['url'] ?>" class="services-icon-size" />
-							</div>
-							<div class="services-title"><?php the_field('service3-title'); ?></div>
-							<div class="services-content"><?php the_field('service3-content'); ?></div>
-						</div>
+						<?php endwhile; ?>
 					</div>
+					<?php endif; ?>
 				</div>
 				<div class="eligibility-wrapper">
 					<div class="section-title">
@@ -128,14 +113,16 @@ get_header();
 					<div class="section-body">
 						<?php the_field('eligibility-description'); ?>
 					</div>
+					<?php if (have_rows('eligibility-list-items')): ?>
 					<ul class="eligibility-list">
-						<li><span><img src="<?php echo get_field('eligibility-list-icon')['url'] ?>" /></span><?php the_field('eligibility-list-item1'); ?></li>
-						<li><span><img src="<?php echo get_field('eligibility-list-icon')['url'] ?>" /></span><?php the_field('eligibility-list-item2'); ?></li>
-						<li><span><img src="<?php echo get_field('eligibility-list-icon')['url'] ?>" /></span><?php the_field('eligibility-list-item3'); ?></li>
-						<li><span><img src="<?php echo get_field('eligibility-list-icon')['url'] ?>" /></span><?php the_field('eligibility-list-item4'); ?></li>
-						<li><span><img src="<?php echo get_field('eligibility-list-icon')['url'] ?>" /></span><?php the_field('eligibility-list-item5'); ?></li>
-						<li><span><img src="<?php echo get_field('eligibility-list-icon')['url'] ?>" /></span><?php the_field('eligibility-list-item6'); ?></li>
+						<?php while (have_rows('eligibility-list-items')): the_row();
+							// vars
+							$item = get_sub_field('item');
+						?>
+						<li><span><img src="<?php echo get_field('eligibility-list-icon')['url'] ?>" /></span><?php echo $item; ?></li>
+						<?php endwhile; ?>
 					</ul>
+					<?php endif; ?>
 				</div>
 			</div>	
 		</section>
@@ -187,7 +174,7 @@ get_header();
 				</div>
 				<div class="partners-content">
 					
-					<div class="frow justify-between">
+					<div class="frow justify-start">
 						<div class="partners-single"><img src="<?php echo get_field('partner-logo-one', 'option')['url'] ?>" class="partner-logo-img" /></div>
 						<div class="partners-single"><img src="<?php echo get_field('partner-logo-two', 'option')['url'] ?>" class="partner-logo-img" /></div>
 						<div class="partners-single"><img src="<?php echo get_field('partner-logo-three', 'option')['url'] ?>" class="partner-logo-img" /></div>

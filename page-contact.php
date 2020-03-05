@@ -35,7 +35,7 @@ get_header();
 		
 		<section class="contact-info-section">
 			<div class="bhm-wrapper">
-				<div class="section-title">
+				<div class="section-title initial-title">
 					<div class="section-title-text"><?php the_field('section-contact-title'); ?></div>
 					<div class="section-title-bottom"></div>
 				</div>
@@ -83,11 +83,11 @@ get_header();
 
 		<section class="section-testimonials">
 			<div class="section-testimonials-bg" style="background-image: url(<?php the_field('contact-testimonial-img'); ?>);">
-				<div class="bhm-wrapper-testimonial">
+				
 					<div class="testimonials-content"><?php the_field('contact-testimonial-content'); ?></div>
 					<div class="testimonials-readmore"><?php the_field('contact-testimonial-readmore'); ?></div>
 					<a class="bhm-btn-base" href="<?php echo the_field('contact-testimonial-link'); ?>" target="_blank"><div><?php the_field('contact-testimonial-link-title'); ?></div></a>
-				</div>
+				
 			</div>
 		</section>
 		
