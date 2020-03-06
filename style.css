@@ -530,6 +530,9 @@ object {
   @media screen and (min-width: 1280px) {
     .bhm-wrapper {
       padding: 0 100px 100px; } }
+  @media screen and (min-width: 1024px) {
+    .bhm-wrapper.footer-menu {
+      padding-bottom: 25px; } }
 
 .bhm-wrapper-testimonials {
   padding: 0 20px; }
@@ -766,7 +769,7 @@ object {
   background: #96120E;
   width: auto;
   display: inline-block;
-  padding: 15px 30px;
+  padding: 15px 22px;
   color: #fff;
   text-transform: uppercase;
   font-weight: 700; }
@@ -779,10 +782,13 @@ object {
     .forms-wrapper {
       width: 60%; } }
   .forms-wrapper .forms-single {
-    margin: 0 auto 20px; }
+    margin: 0 auto 20px;
+    width: 100%;
+    text-align: center; }
     @media screen and (min-width: 992px) {
       .forms-wrapper .forms-single {
-        margin: 0; } }
+        margin: 0 auto;
+        width: auto; } }
 
 .bhm-welcome {
   text-align: center; }
@@ -1083,8 +1089,7 @@ object {
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  height: 50vh;
-  margin-bottom: 50px; }
+  height: 50vh; }
   @media screen and (min-width: 992px) {
     .contact-details-img {
       width: 65%; } }
@@ -1101,7 +1106,8 @@ object {
   .contact-details-info .contact-details-title {
     font-weight: 700;
     font-size: 24px;
-    padding-bottom: 40px; }
+    padding-bottom: 40px;
+    padding-top: 30px; }
   .contact-details-info .contact-details-add {
     padding-bottom: 40px; }
   .contact-details-info .contact-details-cta {
@@ -1128,10 +1134,16 @@ object {
       border-bottom: none; }
     .faqs-wrapper .faq-single .faq-question {
       font-weight: 700;
-      font-size: 22px;
+      font-size: 18px;
       padding-bottom: 5px; }
+      @media screen and (min-width: 992px) {
+        .faqs-wrapper .faq-single .faq-question {
+          font-size: 22px; } }
     .faqs-wrapper .faq-single .faq-answer {
-      font-size: 20px; }
+      font-size: 16px; }
+      @media screen and (min-width: 992px) {
+        .faqs-wrapper .faq-single .faq-answer {
+          font-size: 20px; } }
 
 .ep-wrapper {
   padding-top: 75px;
@@ -1305,15 +1317,89 @@ a {
         color: #fff; }
 
 @media screen and (min-width: 992px) {
-  .contact ul {
-    width: 330px;
+  .contact {
+    width: 300px;
     padding-inline-start: 0px; } }
-.contact ul li {
+.contact li {
   list-style: none; }
-  .contact ul li.mail_footer a {
+
+.footer-navigation ul {
+  list-style: none;
+  padding-inline-start: 0px; }
+  .footer-navigation ul li a {
     color: #fff; }
-    .contact ul li.mail_footer a:visited {
-      color: #fff; }
+
+span.city {
+  display: block;
+  padding-left: 33px; }
+
+span.no-bullet-img {
+  padding-left: 15px; }
+
+span.bullet-text {
+  padding-left: 15px; }
+  span.bullet-text.no-bullet {
+    padding-left: 18px; }
+
+.mail-icon a {
+  color: #fff; }
+  .mail-icon a:visited, .mail-icon a:hover {
+    color: #fff; }
+
+.git-items-wrapper {
+  padding-top: 15px; }
+
+.footer-logo {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 50px;
+  padding-top: 15px; }
+  @media screen and (min-width: 767px) {
+    .footer-logo {
+      width: 12%;
+      padding-bottom: 0; } }
+  @media screen and (min-width: 1024px) {
+    .footer-logo {
+      width: 15%; } }
+
+.quick-links {
+  padding-bottom: 50px;
+  width: 100%; }
+  @media screen and (min-width: 767px) {
+    .quick-links {
+      width: 25%;
+      padding-bottom: 0; } }
+  @media screen and (min-width: 1280px) {
+    .quick-links {
+      width: 20%; } }
+
+.contact {
+  padding-bottom: 50px;
+  width: 100%; }
+  @media screen and (min-width: 480px) {
+    .contact {
+      padding-bottom: 75px; } }
+  @media screen and (min-width: 767px) {
+    .contact {
+      width: 40%;
+      padding-bottom: 0; } }
+  @media screen and (min-width: 1024px) {
+    .contact {
+      width: 30%; } }
+  @media screen and (min-width: 1280px) {
+    .contact {
+      width: 25%; } }
+
+.award-logo {
+  width: 100%;
+  text-align: center; }
+  @media screen and (min-width: 767px) {
+    .award-logo {
+      width: 10%;
+      padding-bottom: 0; } }
+  @media screen and (min-width: 1024px) {
+    .award-logo {
+      width: 15%; } }
 
 /*--------------------------------------------------------------
 # Accessibility

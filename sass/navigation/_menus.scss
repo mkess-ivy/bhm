@@ -170,7 +170,7 @@
 	margin: 0 !important;
 }
 
-// Footer
+// Global Footer
 .site-footer {
 	background: $dark-red;
 	color: $white;
@@ -197,22 +197,117 @@
 		}
 	}
 }
-.contact ul {
+.contact {
 	@include laptop {
-		width: 330px;
+		width: 300px;
 		padding-inline-start: 0px;
 	}
 
 	li {
 		list-style: none;
+	}
+}
 
-		&.mail_footer {
+.footer-navigation {
+	ul {
+		list-style: none;
+		padding-inline-start: 0px;
+
+		li {
+			
 			a {
 				color: $white;
-				&:visited {
-					color: $white;
-				}
 			}
 		}
 	}
 }
+
+span.city {
+	display: block;
+	padding-left: 33px;
+}
+span.no-bullet-img {
+	padding-left: 15px;
+}
+span.bullet-text {
+	padding-left: 15px;
+
+	&.no-bullet {
+		padding-left: 18px;
+	}
+}
+
+.mail-icon a {
+	color: $white;
+
+	&:visited,
+	&:hover {
+		color: $white;
+	}
+}
+.git-items-wrapper {
+	padding-top: 15px;
+}
+
+.footer-logo {
+	width: 100%;
+	text-align: center;
+	padding-bottom: 50px;
+	padding-top: 15px;
+
+	@include tablet {
+		width: 12%;
+		padding-bottom: 0;
+	}
+
+	@include desktop-small {
+		width: 15%;
+	}
+}
+.quick-links {
+	padding-bottom: 50px;
+	width: 100%;
+
+	@include tablet {
+		width: 25%;
+		padding-bottom: 0;
+	}
+
+	@include desktop {
+		width: 20%;
+	}
+}
+.contact {
+	padding-bottom: 50px;
+	width: 100%;
+
+	@include phone-large {
+		padding-bottom: 75px;
+	}
+
+	@include tablet {
+		width: 40%;
+		padding-bottom: 0;
+	}
+
+	@include desktop-small {
+		width: 30%;
+	}
+	@include desktop {
+		width: 25%;
+	}
+}
+.award-logo {
+	width: 100%;
+	text-align: center;
+
+	@include tablet {
+		width: 10%;
+		padding-bottom: 0;
+	}
+
+	@include desktop-small {
+		width: 15%;
+	}
+}
+
