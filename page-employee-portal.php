@@ -68,7 +68,7 @@ get_header();
 									<div class="ep-description">
 										<?php echo $description; ?>
 									</div>
-									<a href="<?php echo $link ?>" target="_blank">
+									<a class="bhm-btn-base" href="<?php echo $link ?>" target="_blank">
 										<div class="ep-link">
 											<?php echo $link_title ?>
 										</div>

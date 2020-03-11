@@ -125,7 +125,7 @@ get_header();
 						<div class="contact-details-add">
 							<?php the_field('contact-details-address'); ?>
 						</div>
-						<a href="<?php echo the_field('contact-details-link'); ?>" target="_blank">
+						<a class="bhm-btn-base" href="<?php echo the_field('contact-details-link'); ?>" target="_blank">
 							<div class="contact-details-cta">
 								<?php the_field('contact-details-link-title'); ?>
 							</div>

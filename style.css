@@ -772,7 +772,12 @@ object {
   padding: 15px 22px;
   color: #fff;
   text-transform: uppercase;
-  font-weight: 700; }
+  font-weight: 700;
+  border: 2px solid #96120E; }
+  .bhm-btn-base div:hover {
+    background: #fff;
+    color: #96120E;
+    border: 2px solid #96120E; }
 
 .forms-wrapper {
   padding-top: 75px;
@@ -1011,11 +1016,7 @@ object {
   .events-single .events-address {
     padding-bottom: 15px; }
   .events-single a div {
-    padding: 10px 15px;
-    border: 1px solid;
-    display: inline-block;
-    color: #96120E;
-    letter-spacing: 0.5px; }
+    padding: 10px 15px; }
 
 .gallery-img {
   background-position: center;
@@ -1050,7 +1051,13 @@ object {
   font-size: 13px;
   padding: 10px 15px;
   text-transform: uppercase;
-  border: 1px solid; }
+  border: 1px solid #fff;
+  font-weight: bold;
+  text-decoration: none; }
+  .gallery-cta:hover {
+    color: #96120E;
+    background: #fff;
+    text-decoration: none; }
 
 .contact-info-wrapper {
   margin: auto;
@@ -1180,12 +1187,8 @@ object {
         font-size: 14px;
         padding-bottom: 25px; }
       .ep-wrapper .single-ep .ep-meta .ep-link {
-        display: inline-block;
         padding: 6px 20px;
-        border: 1px solid;
-        color: #96120E;
-        font-size: 14px;
-        text-transform: uppercase; }
+        font-size: 14px; }
 
 /*--------------------------------------------------------------
 # Mixins

@@ -74,7 +74,7 @@ get_header();
 												<?php echo $description; ?>
 											</div>
 										</div>
-										<a href="<?php echo $link; ?>">
+										<a class="bhm-btn-base" href="<?php echo $link; ?>">
 											<div>RSVP</div>
 										</a>
 									</div>
