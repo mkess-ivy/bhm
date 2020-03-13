@@ -45,6 +45,29 @@
 
 			
 		</header><!-- #masthead -->
+		<button class="hamburger hamburger--squeeze" type="button">
+			<span class="hamburger-box">
+				<span class="hamburger-inner"></span>
+			</span>
+		</button>
+		<div class="overlay overlay-data">
+
+			<div class="overlay_container clear">
+				<nav>
+					
+						<img class="overlay-logo" src="<?php echo get_field('overlay_logo', 'option')['url'] ?>" />
+					
+						<?php
+							wp_nav_menu( array(
+								'theme_location' => 'mobile-menu',
+								'menu_id'        => 'primary-menu',
+							) );
+						?>
+					</div>
+				</nav>
+			</div>
+
+		</div>
 	</div>
 </div>
 

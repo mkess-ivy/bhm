@@ -34,7 +34,7 @@ get_header();
 
 									$i++;
 
-									if( $i > 3 )
+									if( $i > 6 )
 									{
 										break;
 									}
@@ -88,7 +88,7 @@ get_header();
 				<section class="gallery-wrapper">
 					
 					<div class="frow justify-between">
-						<?php query_posts(array('post_type' => 'post','orderby' => 'date'));
+						<?php query_posts(array('post_type' => 'post','posts_per_page' => 3, 'orderby' => 'date'));
 							
 							if(have_posts()) : while(have_posts()) : the_post(); ?>
 						
@@ -97,7 +97,7 @@ get_header();
 							<div class="gallery-img single" style="background-image:url('<?php echo $backgroundImg[0]; ?>'); ">
 								<div class="frow centered-column">
 									<div class="gallery-title"><?php the_title(); ?></div>
-									<a href="<?php echo esc_url( get_permalink() ); ?>">
+									<a class="gallery-cta-link" href="<?php echo esc_url( get_permalink() ); ?>">
 										<div class="gallery-cta">
 											<?php esc_html_e( 'View Gallery', 'textdomain' ); ?>
 										</div>

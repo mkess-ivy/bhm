@@ -34,7 +34,7 @@ get_header();
 		?>
 
 		<div class="bhm-wrapper">
-			<section class="bhm-about">
+			<section class="bhm-about reveal">
 				
 
 				<?php if( have_rows ('about-section') ):
@@ -77,7 +77,7 @@ get_header();
 				<?php endif; ?>
 			</section>
 
-			<section class="bhm-values">
+			<section class="bhm-values reveal">
 				<div class="section-title">
 					<div class="section-title-text"><?php the_field('core-values-title'); ?></div>
 					<div class="section-title-bottom"></div>
@@ -97,7 +97,7 @@ get_header();
 			</div>
 		</section>
 
-		<section class="section-team">
+		<section class="section-team reveal">
 			<div class="bhm-wrapper">
 				<div class="section-title">
 					<div class="section-title-text"><?php the_field('section-team-title'); ?></div>

@@ -57,7 +57,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="award-logo"><a href="/"><img src="<?php echo get_field('awards_logo', 'option')['url'] ?>" /></a></div>
+					<div class="award-logo"><a href="<?php echo get_field('awards_url', 'option') ?>" target="_blank"><img src="<?php echo get_field('awards_logo', 'option')['url'] ?>" /></a></div>
 				</div>
 			</div>
 		</footer><!-- #colophon -->

@@ -35,7 +35,7 @@ get_header();
 		?>
 
 		<div class="bhm-wrapper">
-			<section class="bhm-welcome">
+			<section class="bhm-welcome reveal">
 				<div class="section-title initial-title">
 					<div class="section-title-text"><?php the_field('welcome-home-title'); ?></div>
 					<div class="section-title-bottom"></div>
@@ -46,7 +46,7 @@ get_header();
 				</div>
 			</section>
 		</div>
-		<section class="section-highlight">
+		<section class="section-highlight reveal">
 			<div class="frow justify-start">
 				<div class="highlight-img" style="background-image: url(<?php the_field('highlight-img'); ?>);"></div>
 				<div class="highlight-content">
@@ -59,7 +59,7 @@ get_header();
 			</div>
 		</section>
 		<div class="bhm-wrapper">
-			<section class="section-programs">
+			<section class="section-programs reveal">
 				<div class="section-title">
 					<div class="section-title-text"><?php the_field('programs-title'); ?></div>
 					<div class="section-title-bottom"></div>
@@ -89,7 +89,7 @@ get_header();
 			</section>
 		</div>
 		
-		<section class="section-testimonials">
+		<section class="section-testimonials reveal">
 			<div class="section-testimonials-bg" style="background-image: url(<?php the_field('home-testimonial-img'); ?>);">
 				<div class="testimonials-content"><?php the_field('home-testimonial-msg');?></div>
 				<a class="bhm-btn-base" href="<?php echo the_field('home-testimonial-link'); ?>" target="_blank"><div><?php the_field('home-testimonial-link-title'); ?></div></a>
@@ -97,7 +97,7 @@ get_header();
 		</section>
 		
 		
-		<section class="section-partners">
+		<section class="section-partners reveal">
 			<div class="bhm-wrapper">
 				<div class="section-title">
 					<div class="section-title-text"><?php the_field('partners-title', 'option'); ?></div>

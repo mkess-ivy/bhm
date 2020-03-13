@@ -33,7 +33,7 @@ get_header();
 		?>
 
 		<div class="bhm-wrapper">
-			<section class="bhm-programs">
+			<section class="bhm-programs reveal">
 				<div class="section-title initial-title">
 					<div class="section-title-text"><?php the_field('section-programs-title'); ?></div>
 					<div class="section-title-bottom"></div>
@@ -65,16 +65,16 @@ get_header();
 		</div>
 
 		<section class="section-testimonials">
-			<div class="section-testimonials-bg" style="background-image: url(<?php the_field('services-testimonial-img'); ?>);">
+			<div class="section-testimonials-bg" style="background-image: url(<?php the_field('services-cta-img'); ?>);">
 				
-					<div class="testimonials-content"><?php the_field('services-testimonial-content'); ?></div>
-					<div class="testimonials-readmore"><?php the_field('services-testimonial-readmore'); ?></div>
-					<a class="bhm-btn-base" href="<?php echo the_field('services-testimonial-link'); ?>" target="_blank"><div><?php the_field('services-testimonial-link-title'); ?></div></a>
+					<div class="testimonials-content"><?php the_field('services-cta-content'); ?></div>
+					<div class="testimonials-readmore"><?php the_field('services-cta-readmore'); ?></div>
+					<a class="bhm-btn-base" href="<?php echo the_field('services-cta-link'); ?>" target="_blank"><div><?php the_field('services-cta-link-title'); ?></div></a>
 				
 			</div>
 		</section>
 
-		<section class="section-services">
+		<section class="section-services reveal">
 			<div class="bhm-wrapper">
 				<div class="section-title">
 					<div class="section-title-text"><?php the_field('section-services-title'); ?></div>
@@ -141,7 +141,7 @@ get_header();
 				</div>
 			</div>
 		</section>
-		<section class="section-resources">
+		<section class="section-resources reveal">
 			<div class="bhm-wrapper">
 				<div class="section-title">
 					<div class="section-title-text"><?php the_field('resources-title', 'option'); ?></div>
@@ -166,7 +166,7 @@ get_header();
 			</div>
 		</section>
 		
-		<section class="section-partners">
+		<section class="section-partners reveal">
 			<div class="bhm-wrapper">
 				<div class="section-title">
 					<div class="section-title-text"><?php the_field('partners-title', 'option'); ?></div>

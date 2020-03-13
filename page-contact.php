@@ -35,18 +35,18 @@ get_header();
 		
 		<section class="contact-info-section">
 			<div class="bhm-wrapper">
-				<div class="section-title initial-title">
+				<div class="section-title initial-title reveal">
 					<div class="section-title-text"><?php the_field('section-contact-title'); ?></div>
 					<div class="section-title-bottom"></div>
 				</div>
-				<div class="section-body">
+				<div class="section-body reveal">
 					<?php the_field('section-contact-content'); ?>
 				</div>
 				<?php if( have_rows('contact-info') ): 
 					$i = 0;
 					?>
 					
-					<div class="contact-info-wrapper">
+					<div class="contact-info-wrapper reveal">
 						<div class="frow justify-between">
 							<?php while( have_rows('contact-info') ): the_row(); 
 
@@ -81,7 +81,7 @@ get_header();
 			</div>
 		</section>
 
-		<section class="section-testimonials">
+		<section class="section-testimonials reveal">
 			<div class="section-testimonials-bg" style="background-image: url(<?php the_field('contact-testimonial-img'); ?>);">
 				
 					<div class="testimonials-content"><?php the_field('contact-testimonial-content'); ?></div>
@@ -91,7 +91,7 @@ get_header();
 			</div>
 		</section>
 		
-		<section class="section-resources">
+		<section class="section-resources reveal">
 			<div class="bhm-wrapper">
 				<div class="section-title">
 					<div class="section-title-text"><?php the_field('resources-title', 'option'); ?></div>
@@ -116,7 +116,7 @@ get_header();
 			</div>
 		</section>
 		
-		<section class="contact-details">
+		<section class="contact-details reveal">
 			<div class="frow justify-between">
 				<div class="contact-details-img" style="background-image:url(<?php the_field('contact-details-img'); ?>);"></div>
 				<div class="contact-details-info">
