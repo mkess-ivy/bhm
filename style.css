@@ -1253,7 +1253,7 @@ a {
 .overlay nav {
   width: 100%;
   text-align: center;
-  padding: 10em 0; }
+  padding: 6em 0; }
 
 .overlay ul {
   list-style: none;
@@ -1278,7 +1278,7 @@ a {
       display: block; } }
   .main-navigation.fixed-nav {
     position: fixed;
-    top: 30px;
+    top: 0px;
     z-index: 1000;
     width: 100%;
     border-top: 5px solid #96120E; }
@@ -1516,9 +1516,9 @@ span.bullet-text {
   padding: 2px 8px !important; }
   .header-book-appt:hover {
     border-color: #090807; }
-  .header-book-appt a {
+  .header-book-appt a, .header-book-appt a:visited {
     color: #EE534F; }
-    .header-book-appt a:hover {
+    .header-book-appt a:hover, .header-book-appt a:visited:hover {
       color: #090807; }
 
 /*--------------------------------------------------------------
