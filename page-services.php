@@ -69,7 +69,7 @@ get_header();
 				
 					<div class="testimonials-content"><?php the_field('services-cta-content'); ?></div>
 					<div class="testimonials-readmore"><?php the_field('services-cta-readmore'); ?></div>
-					<a class="bhm-btn-base" href="<?php echo the_field('services-cta-link'); ?>" target="_blank"><div><?php the_field('services-cta-link-title'); ?></div></a>
+					<a class="bhm-btn-base" href="<?php echo the_field('services-cta-link'); ?>"><div><?php the_field('services-cta-link-title'); ?></div></a>
 				
 			</div>
 		</section>
