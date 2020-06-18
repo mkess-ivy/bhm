@@ -20,6 +20,10 @@
       padding-bottom: 25px;
     }
   }
+
+  &.home {
+    padding-bottom: 0;
+  }
 }
 .bhm-wrapper-testimonials {
   padding: 0 20px;
@@ -180,8 +184,8 @@
   }
   .highlight-content {
     width: 100%;
-    background-color: $dark-red;
-    color: $white;
+    background-color: $red;
+    color: $black;
     padding: 50px 25px;
     // font-size: 18px;
 
@@ -212,7 +216,7 @@
     .highlight-title-bottom {
       margin: 7px auto 0;
       width: 75px;
-      border-top: 3px solid $white;
+      border-top: 3px solid $black;
     }
   }
   .highlight-copy {
@@ -329,7 +333,7 @@
   }
 
   @include laptop {
-    width: 170px;
+    width: 190px;
   }
 
   .partner-logo-img {
@@ -349,26 +353,31 @@
 // Buttons
 .bhm-btn-base {
   div {
-    background: $dark-red;
+    background: $red;
     width: auto;
     display: inline-block;
     padding: 15px 22px;
-    color: $white;
+    color: $black;
     text-transform: uppercase;
     font-weight: $bold;
-    border: 2px solid $dark-red;
+    border: 2px solid $red;
 
     &:hover {
       background: $white;
-      color: $dark-red;
-      border: 2px solid $dark-red;
+      color: $red;
+      border: 2px solid $red;
     }
+  }
+}
+.btn-space {
+  div {
+    margin-bottom: 10px;
   }
 }
 
 // Forms 
 .forms-wrapper {
-  padding-top: 75px;
+  padding-top: 30px;
   width: 75%;
   margin: auto;
 
@@ -400,8 +409,23 @@
 .bhm-pre-post {
   text-align: center;
   text-transform: uppercase;
-  color: $dark-red;
+  color: $red;
 }
 .entry-header {
   // margin-bottom: 4.2em;
+}
+
+// Program Eligibility 
+.eligibility-wrapper {
+  margin-top: 7vh;
+}
+
+// Referrals
+.referral-wrapper {
+  margin-top: 75px;
+}
+
+
+.section-wrapper {
+  margin-top: 75px;
 }

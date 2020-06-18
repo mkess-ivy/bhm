@@ -4,9 +4,13 @@
   
     .accred-logo {
       padding-bottom: 40px;
-    }
+    }  
 }
-
+.section-mantra {
+  font-size: 18px;
+  padding-bottom: 15px;
+  font-style: italic;
+}
 // Programs - Home
 .section-programs {
     // padding-top: 75px;
@@ -19,8 +23,8 @@
     .programs-single {
       width: 100%;
       margin: 15px 2px;
-      background: $dark-red;
-      color: $white;
+      background: $red;
+      color: $black;
       padding: 60px 10px;
 
       @include phone-large {
@@ -52,4 +56,55 @@
       font-size: 0.9rem;
       font-family: $body-font;
     }
+}
+
+// Mission, Vision, Philosophy
+.bhm-about-single {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 75px;
+
+  @include tablet {
+      width: 45%;
+  }
+
+  @include laptop {
+      width: 45%;
+      padding-bottom: 0;
+  }
+
+
+}
+.bhm-about-single-title {
+  text-transform: uppercase;
+  font-weight: $bold;
+  font-size: 20px;
+  padding-bottom: 30px;
+
+  @include tablet {
+      font-size: 18px;
+  }
+}
+.bhm-about-single-content {
+  font-family: $body-font;
+
+  &.vision-content {
+      width: 75%;
+      margin-left: 75px;
+  }
+}
+.bhm-icon-size {
+  height: 70px;
+  padding-bottom: 30px;
+}
+.vision-wrapper {
+  margin-top: 125px;
+  @include bg_properties;
+
+  padding: 40px 60px 75px;
+
+  .vision-title {
+    width: 14%;
+    text-align: center;
+  }
 }

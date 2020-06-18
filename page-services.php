@@ -33,49 +33,7 @@ get_header();
 		?>
 
 		<div class="bhm-wrapper">
-			<section class="bhm-programs reveal">
-				<div class="section-title initial-title">
-					<div class="section-title-text"><?php the_field('section-programs-title'); ?></div>
-					<div class="section-title-bottom"></div>
-				</div>
-				<div class="section-body">
-					<?php the_field('section-programs-content'); ?>
-				</div>
-				<div class="programs-wrapper">
-					<?php if ( have_rows('service-program-section') ): ?>
-
-					<div class="frow justify-between">
-						<?php while ( have_rows('service-program-section')): the_row();
-							// vars
-							$program_title = get_sub_field('program-single-title');
-							$program_content = get_sub_field('program-single-content');
-						?>
-						<div class="programs-single">
-							<div class="programs-icon">
-								<img src="<?php echo get_field('programs-icon')['url'] ?>" />
-							</div>
-							<div class="programs-title"><?php echo $program_title; ?></div>
-							<div class="programs-content"><?php echo $program_content;?></div>
-						</div>
-						<?php endwhile; ?>
-					</div>
-					<?php endif; ?>
-				</div>
-			</section>
-		</div>
-
-		<section class="section-testimonials">
-			<div class="section-testimonials-bg" style="background-image: url(<?php the_field('services-cta-img'); ?>);">
-				
-					<div class="testimonials-content"><?php the_field('services-cta-content'); ?></div>
-					<div class="testimonials-readmore"><?php the_field('services-cta-readmore'); ?></div>
-					<a class="bhm-btn-base" href="<?php echo the_field('services-cta-link'); ?>"><div><?php the_field('services-cta-link-title'); ?></div></a>
-				
-			</div>
-		</section>
-
-		<section class="section-services reveal">
-			<div class="bhm-wrapper">
+			<section class="section-services reveal">
 				<div class="section-title">
 					<div class="section-title-text"><?php the_field('section-services-title'); ?></div>
 					<div class="section-title-bottom"></div>
@@ -104,6 +62,48 @@ get_header();
 						<?php endwhile; ?>
 					</div>
 					<?php endif; ?>
+				</div>	
+			</section>
+		</div>
+
+		<section class="section-testimonials">
+			<div class="section-testimonials-bg" style="background-image: url(<?php the_field('services-cta-img'); ?>);">
+				
+					<div class="testimonials-content"><?php the_field('services-cta-content'); ?></div>
+					<div class="testimonials-readmore"><?php the_field('services-cta-readmore'); ?></div>
+					<a class="bhm-btn-base" href="<?php echo the_field('services-cta-link'); ?>"><div><?php the_field('services-cta-link-title'); ?></div></a>
+				
+			</div>
+		</section>
+		
+		<div class="bhm-wrapper">
+			<section class="bhm-programs reveal">
+				<div class="section-title initial-title">
+					<div class="section-title-text"><?php the_field('section-programs-title'); ?></div>
+					<div class="section-title-bottom"></div>
+				</div>
+				<div class="section-body">
+					<?php the_field('section-programs-content'); ?>
+				</div>
+				<div class="programs-wrapper">
+					<?php if ( have_rows('service-program-section') ): ?>
+
+					<div class="frow justify-between">
+						<?php while ( have_rows('service-program-section')): the_row();
+							// vars
+							$program_title = get_sub_field('program-single-title');
+							$program_content = get_sub_field('program-single-content');
+						?>
+						<div class="programs-single">
+							<div class="programs-icon">
+								<img src="<?php echo get_field('programs-icon')['url'] ?>" />
+							</div>
+							<div class="programs-title"><?php echo $program_title; ?></div>
+							<div class="programs-content"><?php echo $program_content;?></div>
+						</div>
+						<?php endwhile; ?>
+					</div>
+					<?php endif; ?>
 				</div>
 				<div class="eligibility-wrapper">
 					<div class="section-title">
@@ -124,8 +124,10 @@ get_header();
 					</ul>
 					<?php endif; ?>
 				</div>
-			</div>	
-		</section>
+			</section>
+		</div>
+		
+		
 		<section class="section-highlight">
 			<div class="frow justify-start">
 				<div class="highlight-img client-highlight-img" style="background-image: url(<?php the_field('client-highlight-img'); ?>);"></div>
@@ -155,14 +157,23 @@ get_header();
 						<div class="forms-single">
 							<a class="bhm-btn-base" href="<?php echo the_field('client-form-link', 'option'); ?>" target="_blank"><div><?php the_field('client-form-link-title', 'option'); ?></div></a>
 						</div>
-						<div class="forms-single">
-							<a class="bhm-btn-base" href="<?php echo the_field('referral-form-link', 'option'); ?>" target="_blank"><div><?php the_field('referral-form-link-title', 'option'); ?></div></a>
-						</div>
+						
 						<div class="forms-single">
 							<a class="bhm-btn-base" href="<?php echo the_field('schedule-link', 'option'); ?>" target="_blank"><div><?php the_field('schedule-form-link-title', 'option'); ?></div></a>
 						</div>
 					</div>
 				</div>
+				<div class="referral-wrapper">
+					<div class="section-body">
+						<?php the_field('resources-description-002', 'option'); ?>
+					</div>
+					<div class="forms-wrapper">
+						<div class="forms-single">
+							<a class="bhm-btn-base" href="<?php echo the_field('referral-form-link', 'option'); ?>" target="_blank"><div><?php the_field('referral-form-link-title', 'option'); ?></div></a>
+						</div>
+					</div>
+				</div>
+				
 			</div>
 		</section>
 		
@@ -174,12 +185,12 @@ get_header();
 				</div>
 				<div class="partners-content">
 					
-					<div class="frow justify-start">
+					<div class="frow justify-between">
 						<div class="partners-single"><img src="<?php echo get_field('partner-logo-one', 'option')['url'] ?>" class="partner-logo-img" /></div>
 						<div class="partners-single"><img src="<?php echo get_field('partner-logo-two', 'option')['url'] ?>" class="partner-logo-img" /></div>
 						<div class="partners-single"><img src="<?php echo get_field('partner-logo-three', 'option')['url'] ?>" class="partner-logo-img" /></div>
 						<div class="partners-single"><img src="<?php echo get_field('partner-logo-four', 'option')['url'] ?>" class="partner-logo-img" /></div>
-						<div class="partners-single"><img src="<?php echo get_field('partner-logo-five', 'option')['url'] ?>" class="partner-logo-img" /></div>
+						
 					</div>
 				</div>
 			</div>

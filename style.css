@@ -516,6 +516,25 @@ object {
 .custom-logo-link {
   display: inline-block; }
 
+.post-30 .wp-block-columns {
+  width: 75%;
+  margin: 4em auto; }
+  .post-30 .wp-block-columns .wp-block-column {
+    border: 3px solid #EE534F;
+    text-align: center; }
+  .post-30 .wp-block-columns h3 {
+    background: #EE534F;
+    color: #fff;
+    padding: 15px; }
+  .post-30 .wp-block-columns .wp-block-button {
+    color: #fff;
+    padding-bottom: 30px; }
+
+.post-password-form {
+  width: 40%;
+  margin: 9em auto;
+  text-align: center; }
+
 /*--------------------------------------------------------------
 # Layouts - Components
 --------------------------------------------------------------*/
@@ -533,6 +552,8 @@ object {
   @media screen and (min-width: 1024px) {
     .bhm-wrapper.footer-menu {
       padding-bottom: 25px; } }
+  .bhm-wrapper.home {
+    padding-bottom: 0; }
 
 .bhm-wrapper-testimonials {
   padding: 0 20px; }
@@ -653,8 +674,8 @@ object {
       height: auto; } }
 .section-highlight .highlight-content {
   width: 100%;
-  background-color: #96120E;
-  color: #fff;
+  background-color: #EE534F;
+  color: #090807;
   padding: 50px 25px; }
   @media screen and (min-width: 480px) {
     .section-highlight .highlight-content {
@@ -675,7 +696,7 @@ object {
   .section-highlight .highlight-title .highlight-title-bottom {
     margin: 7px auto 0;
     width: 75px;
-    border-top: 3px solid #fff; }
+    border-top: 3px solid #090807; }
 .section-highlight .highlight-copy {
   font-family: "Lora", serif;
   text-align: center; }
@@ -761,26 +782,29 @@ object {
       width: 130px; } }
   @media screen and (min-width: 992px) {
     .partners-single {
-      width: 170px; } }
+      width: 190px; } }
   .partners-single .partner-logo-img {
     width: 100%; }
 
 .bhm-btn-base div {
-  background: #96120E;
+  background: #EE534F;
   width: auto;
   display: inline-block;
   padding: 15px 22px;
-  color: #fff;
+  color: #090807;
   text-transform: uppercase;
   font-weight: 700;
-  border: 2px solid #96120E; }
+  border: 2px solid #EE534F; }
   .bhm-btn-base div:hover {
     background: #fff;
-    color: #96120E;
-    border: 2px solid #96120E; }
+    color: #EE534F;
+    border: 2px solid #EE534F; }
+
+.btn-space div {
+  margin-bottom: 10px; }
 
 .forms-wrapper {
-  padding-top: 75px;
+  padding-top: 30px;
   width: 75%;
   margin: auto; }
   @media screen and (min-width: 1280px) {
@@ -806,12 +830,26 @@ object {
 .bhm-pre-post {
   text-align: center;
   text-transform: uppercase;
-  color: #96120E; }
+  color: #EE534F; }
+
+.eligibility-wrapper {
+  margin-top: 7vh; }
+
+.referral-wrapper {
+  margin-top: 75px; }
+
+.section-wrapper {
+  margin-top: 75px; }
 
 .bhm-welcome {
   text-align: center; }
   .bhm-welcome .accred-logo {
     padding-bottom: 40px; }
+
+.section-mantra {
+  font-size: 18px;
+  padding-bottom: 15px;
+  font-style: italic; }
 
 .section-programs {
   text-align: center; }
@@ -820,8 +858,8 @@ object {
   .section-programs .programs-single {
     width: 100%;
     margin: 15px 2px;
-    background: #96120E;
-    color: #fff;
+    background: #EE534F;
+    color: #090807;
     padding: 60px 10px; }
     @media screen and (min-width: 480px) {
       .section-programs .programs-single {
@@ -852,24 +890,40 @@ object {
   padding-bottom: 75px; }
   @media screen and (min-width: 767px) {
     .bhm-about-single {
-      width: 31%; } }
+      width: 45%; } }
   @media screen and (min-width: 992px) {
     .bhm-about-single {
-      width: 31%;
+      width: 45%;
       padding-bottom: 0; } }
-  .bhm-about-single .bhm-about-single-title {
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 20px;
-    padding-bottom: 30px; }
-    @media screen and (min-width: 767px) {
-      .bhm-about-single .bhm-about-single-title {
-        font-size: 18px; } }
-  .bhm-about-single .bhm-about-single-content {
-    font-family: "Lora", serif; }
-  .bhm-about-single .bhm-icon-size {
-    height: 70px;
-    padding-bottom: 30px; }
+
+.bhm-about-single-title {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+  padding-bottom: 30px; }
+  @media screen and (min-width: 767px) {
+    .bhm-about-single-title {
+      font-size: 18px; } }
+
+.bhm-about-single-content {
+  font-family: "Lora", serif; }
+  .bhm-about-single-content.vision-content {
+    width: 75%;
+    margin-left: 75px; }
+
+.bhm-icon-size {
+  height: 70px;
+  padding-bottom: 30px; }
+
+.vision-wrapper {
+  margin-top: 125px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 40px 60px 75px; }
+  .vision-wrapper .vision-title {
+    width: 14%;
+    text-align: center; }
 
 @media screen and (min-width: 992px) {
   .bhm-values {
@@ -998,10 +1052,15 @@ object {
 .client-highlight-img {
   min-height: 45vh; }
 
-@media screen and (min-width: 1280px) {
-  .events-wrapper {
-    width: 80%;
-    margin: auto; } }
+.events-wrapper {
+  margin-top: 75px; }
+  @media screen and (min-width: 1280px) {
+    .events-wrapper {
+      width: 80%;
+      margin: auto; } }
+
+.calendar-wrapper {
+  margin-top: 75px; }
 
 .events-single {
   padding-bottom: 75px; }
@@ -1075,6 +1134,10 @@ object {
     background: #fff;
     text-decoration: none; }
 
+.calendar-link-wrapper {
+  text-align: center;
+  margin: 50px auto 0; }
+
 .contact-info-wrapper {
   margin: auto;
   padding: 75px 0 0; }
@@ -1089,7 +1152,8 @@ object {
         padding-bottom: 75px; } }
     @media screen and (min-width: 767px) {
       .contact-info-wrapper .contact-info-single {
-        width: 32%; } }
+        width: 32%;
+        padding: 0 25px 75px; } }
 
 .contact-icon {
   text-align: center;
@@ -1134,9 +1198,9 @@ object {
   .contact-details-info .contact-details-add {
     padding-bottom: 40px; }
   .contact-details-info .contact-details-cta {
-    background-color: #96120E;
+    background-color: #EE534F;
     padding: 14px 24px;
-    color: #fff;
+    color: #090807;
     text-transform: uppercase;
     font-size: 14px;
     font-weight: bold; }
@@ -1151,7 +1215,7 @@ object {
   padding: 75px 0 0;
   text-align: center; }
   .faqs-wrapper .faq-single {
-    border-bottom: 1px solid #96120E;
+    border-bottom: 1px solid #EE534F;
     padding: 30px 0; }
     .faqs-wrapper .faq-single:last-child {
       border-bottom: none; }
@@ -1189,11 +1253,11 @@ object {
         width: 31%; } }
     .ep-wrapper .single-ep .ep-title {
       text-align: center;
-      padding: 22px 0;
-      background-color: #96120E;
-      color: #fff; }
+      padding: 22px 10px;
+      background-color: #EE534F;
+      color: #090807; }
     .ep-wrapper .single-ep .ep-meta {
-      border: 1px solid #96120E;
+      border: 1px solid #EE534F;
       padding: 20px;
       text-align: center; }
       .ep-wrapper .single-ep .ep-meta .ep-time {
@@ -1394,9 +1458,9 @@ a {
   margin: 0 !important; }
 
 .site-footer {
-  background: #96120E;
-  color: #fff;
-  padding-top: 40px; }
+  color: #090807;
+  padding-top: 40px;
+  border-top: 2px solid #EE534F; }
 
 .footer-menu-title {
   text-transform: uppercase;
@@ -1410,7 +1474,7 @@ a {
   .quick-links-menu li {
     list-style: none; }
     .quick-links-menu li a {
-      color: #fff; }
+      color: #090807; }
       .quick-links-menu li a:visited {
         color: #fff; }
 
@@ -1425,7 +1489,10 @@ a {
   list-style: none;
   padding-inline-start: 0px; }
   .footer-navigation ul li a {
-    color: #fff; }
+    color: #090807 !important; }
+    .footer-navigation ul li a:hover {
+      text-decoration: none !important;
+      color: #EE534F !important; }
 
 span.city {
   display: block;
@@ -1440,9 +1507,9 @@ span.bullet-text {
     padding-left: 18px; }
 
 .mail-icon a {
-  color: #fff; }
+  color: #090807; }
   .mail-icon a:visited, .mail-icon a:hover {
-    color: #fff; }
+    color: #EE534F; }
 
 .git-items-wrapper {
   padding-top: 15px; }

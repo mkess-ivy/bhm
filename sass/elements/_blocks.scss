@@ -1,0 +1,29 @@
+// Employee Portal Gutenberg Block Styles
+.post-30 .wp-block-columns {
+    width: 75%;
+    margin: 4em auto;
+
+    .wp-block-column { 
+        border: 3px solid $red;
+        text-align: center;
+    }
+
+    h3 {
+        background: $red;
+        color: $white;
+        padding: 15px;
+    }
+
+    .wp-block-button {
+        color: $white;
+        padding-bottom: 30px;
+    }
+}
+
+
+// Password Form - Employee Portal
+.post-password-form {
+    width: 40%;
+    margin: 9em auto;
+    text-align: center;
+}

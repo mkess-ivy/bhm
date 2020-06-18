@@ -34,47 +34,20 @@ get_header();
 		?>
 
 		<div class="bhm-wrapper">
-			<section class="bhm-about reveal">
-				
-
-				<?php if( have_rows ('about-section') ):
-					$i = 0;
-					?>
-
-
-					<div class="section-title initial-title">
-						<div class="section-title-text"><?php the_field('about-section-title'); ?></div>
-						<div class="section-title-bottom"></div>
-					</div>
-					
-					<div class="frow justify-between">
-						<?php while( have_rows ('about-section') ): the_row();
-
-						$i++;
-
-						if( $i > 3 )
-						{
-							break;
-						}
-
-						// vars
-						$icon = get_sub_field('about-icon');
-						$title = get_sub_field('about-title');
-						$content = get_sub_field('about-content');
-
-						?>
-
-						<div class="bhm-about-single">
-							<div class="bhm-icon">
-								<img src="<?php echo $icon['url'] ?>" class="bhm-icon-size" />
-							</div>
-							<div class="bhm-about-single-title"><?php echo $title; ?></div>
-							<div class="bhm-about-single-content"><?php echo $content; ?></div>
-						</div>
-						
-						<?php endwhile; ?>
-					</div>
-				<?php endif; ?>
+			<section class="bhm-welcome reveal">
+				<div class="section-title initial-title">
+					<div class="section-title-text"><?php the_field('welcome-home-title'); ?></div>
+					<div class="section-title-bottom"></div>
+				</div>
+				<div class="accred-logo">
+					<img class="accred-logo-img" src="<?php echo esc_url(get_field('welcome-home-img')['url']); ?>" />
+				</div>
+				<div class="section-mantra">
+					<?php the_field('welcome-home-mantra'); ?>
+				</div>
+				<div class="section-body">
+					<?php the_field('welcome-home-content'); ?>
+				</div>
 			</section>
 
 			<section class="bhm-values reveal">
