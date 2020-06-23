@@ -146,6 +146,19 @@ get_header();
 			</div>
 		</section>
 		
+		<section class="section-wrapper">
+			
+			<<div class="section-title">
+				<div class="section-title-text"><?php the_field('testimonial_title'); ?></div>
+				<div class="section-title-bottom"></div>
+			</div>
+
+			<div class="reviews-wrapper">
+				
+				<?php echo do_shortcode('[testimonial_rotator id=665]'); ?>
+			</div>
+			
+		</section>
 		
 		<section class="section-partners reveal">
 			<div class="bhm-wrapper">
