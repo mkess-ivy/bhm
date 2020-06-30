@@ -31,7 +31,7 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
-		
+
 		<section class="section-services section-wrapper">
 			<div class="bhm-wrapper">
 				<div class="section-title-wrapper initial-title">
@@ -41,17 +41,17 @@ get_header();
 				<div class="section-body">
 					<?php the_field('section-faqs-content'); ?>
 				</div>
-				
+
 				<?php if( have_rows('single-faqs') ): ?>
-				
+
 					<div class="faqs-wrapper">
-						
-							<?php while( have_rows('single-faqs') ): the_row(); 
+
+							<?php while( have_rows('single-faqs') ): the_row();
 
 							// vars
 							$question = get_sub_field('faq-question');
 							$answer = get_sub_field('faq-answer');
-							
+
 							?>
 
 							<div class="faq-single">
@@ -64,12 +64,12 @@ get_header();
 							</div>
 
 							<?php endwhile; ?>
-						
+
 					</div>
 				<?php endif; ?>
 			</div>
 		</section>
-		
+
 		<section class="section-resources reveal">
 			<div class="bhm-wrapper">
 				<div class="section-title-wrapper">
@@ -84,7 +84,7 @@ get_header();
 						<div class="forms-single">
 							<a class="bhm-btn-base" href="<?php echo the_field('client-form-link', 'option'); ?>" target="_blank"><div><?php the_field('client-form-link-title', 'option'); ?></div></a>
 						</div>
-						
+
 						<div class="forms-single">
 							<a class="bhm-btn-base" href="<?php echo the_field('schedule-link', 'option'); ?>" target="_blank"><div><?php the_field('schedule-form-link-title', 'option'); ?></div></a>
 						</div>
@@ -100,10 +100,10 @@ get_header();
 						</div>
 					</div>
 				</div>
-				
+
 			</div>
 		</section>
-		
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

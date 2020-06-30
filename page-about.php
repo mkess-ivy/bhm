@@ -63,10 +63,10 @@ get_header();
 
 		<section class="section-testimonials">
 			<div class="section-testimonials-bg" style="background-image: url(<?php echo esc_url(get_field('about-testimonial-img')['url']); ?>);">
-				
+
 					<div class="testimonials-content"><?php the_field('about-testimonial-content'); ?></div>
 					<div class="testimonials-author"><?php the_field('about-testimonial-author'); ?></div>
-				
+
 			</div>
 		</section>
 
@@ -76,7 +76,7 @@ get_header();
 					<div class="section-title-text"><?php the_field('section-team-title'); ?></div>
 					<div class="section-title-bottom"></div>
 				</div>
-				
+
 				<?php if ( have_rows('team-member-section') ): ?>
 				<div class="team-wrapper">
 					<div class="frow justify-between">

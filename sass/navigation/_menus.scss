@@ -1,7 +1,7 @@
 // Overlay
 .hamburger {
 	background: $dark-red;
-  
+
 	@include desktop-small {
 	  display: none !important;
 	}
@@ -223,7 +223,7 @@
 #primary-menu .current-menu-item a {
 	@include desktop-small {
 		color: $red;
-		
+
 	}
 }
 #primary-menu {
@@ -237,7 +237,7 @@
 	a {
 		color: $white;
 		font-size: 28px;
-		
+
 		@include small-tablet {
 			font-size: 36px;
 		}
@@ -307,7 +307,7 @@
 		padding-inline-start: 0px;
 
 		li {
-			
+
 			a {
 				color: $black !important;
 
@@ -350,7 +350,7 @@ span.bullet-text {
 	.item {
 		font-size: 16px;
 	}
-	
+
 }
 
 .footer-logo {
@@ -462,7 +462,6 @@ span.bullet-text {
 		&:hover {
 			color: $black;
 		}
-		
+
 	}
 }
-

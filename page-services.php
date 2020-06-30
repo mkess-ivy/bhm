@@ -63,14 +63,14 @@ get_header();
 						<?php endwhile; ?>
 					</div>
 					<?php endif; ?>
-				</div>	
+				</div>
 			</section>
 		</div>
 
 		<!-- CTA -->
 		<section class="section-testimonials">
 			<div class="section-testimonials-bg" style="background-image: url(<?php echo esc_url(get_field('services-cta-img')['url']); ?>)">
-				
+
 					<div class="testimonials-content">
 						<?php the_field('services-cta-content'); ?>
 					</div>
@@ -78,10 +78,10 @@ get_header();
 						<?php the_field('services-cta-readmore'); ?>
 					</div>
 					<a class="bhm-btn-base" href="<?php echo the_field('services-cta-link'); ?>"><div><?php the_field('services-cta-link-title'); ?></div></a>
-				
+
 			</div>
 		</section>
-		
+
 		<!-- Programs -->
 		<div class="bhm-wrapper">
 			<section class="section-services section-wrapper reveal">
@@ -113,7 +113,7 @@ get_header();
 					<?php endif; ?>
 				</div>
 			</section>
-			
+
 			<!-- Eligibility Wrapper -->
 			<section class="section-services section-wrapper eligibility-wrapper">
 				<div class="section-title-wrapper">
@@ -135,7 +135,7 @@ get_header();
 				<?php endif; ?>
 			</section>
 		</div>
-		
+
 		<!-- Highlight -->
 		<section class="section-highlight">
 			<div class="frow justify-start">
@@ -148,7 +148,7 @@ get_header();
 					<div class="highlight-copy"><?php the_field('client-highlight-testimonial1'); ?>
 						<div class="highlight-author">&ndash;&nbsp;<?php the_field('client-highlight-testimonial1-author'); ?></div>
 					</div>
-					
+
 				</div>
 			</div>
 		</section>
@@ -169,7 +169,7 @@ get_header();
 							<div class="forms-single">
 								<a class="bhm-btn-base" href="<?php echo the_field('client-form-link', 'option'); ?>" target="_blank"><div><?php the_field('client-form-link-title', 'option'); ?></div></a>
 							</div>
-							
+
 							<div class="forms-single">
 								<a class="bhm-btn-base" href="<?php echo the_field('schedule-link', 'option'); ?>" target="_blank"><div><?php the_field('schedule-form-link-title', 'option'); ?></div></a>
 							</div>
@@ -186,9 +186,10 @@ get_header();
 						</div>
 					</div>
 				</div>
+
 			</div>
 		</section>
-		
+
 		<!-- Partners -->
 		<section class="section-services reveal">
 			<div class="bhm-wrapper">
@@ -203,13 +204,13 @@ get_header();
 							<div class="partners-single"><img src="<?php echo get_field('partner-logo-two', 'option')['url'] ?>" class="partner-logo-img" /></div>
 							<div class="partners-single"><img src="<?php echo get_field('partner-logo-three', 'option')['url'] ?>" class="partner-logo-img" /></div>
 							<div class="partners-single"><img src="<?php echo get_field('partner-logo-four', 'option')['url'] ?>" class="partner-logo-img" /></div>
-							
+
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

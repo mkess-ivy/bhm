@@ -1,8 +1,8 @@
 .bhm-values {
     @include laptop {
-        padding-top: 25px; 
+        padding-top: 25px;
     }
-    
+
     .core-values {
         text-align: center;
         font-family: $body-font;
@@ -45,7 +45,7 @@
         @include laptop {
             width: 31%;
         }
-    
+
         .team-name {
             font-weight: $bold;
             font-size: 20px;
@@ -62,7 +62,7 @@
     font-size: 18px;
     padding: 40px 0 20px;
     font-style: italic;
-  
+
     @include desktop {
       padding: 75px 0 20px;
     }

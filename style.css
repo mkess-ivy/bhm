@@ -516,6 +516,25 @@ object {
 .custom-logo-link {
   display: inline-block; }
 
+.post-30 .wp-block-columns {
+  width: 75%;
+  margin: 4em auto; }
+  .post-30 .wp-block-columns .wp-block-column {
+    border: 3px solid #EE534F;
+    text-align: center; }
+  .post-30 .wp-block-columns h3 {
+    background: #EE534F;
+    color: #fff;
+    padding: 15px; }
+  .post-30 .wp-block-columns .wp-block-button {
+    color: #fff;
+    padding-bottom: 30px; }
+
+.post-password-form {
+  width: 40%;
+  margin: 9em auto;
+  text-align: center; }
+
 /*--------------------------------------------------------------
 # Layouts - Components
 --------------------------------------------------------------*/
@@ -912,10 +931,8 @@ object {
     padding-bottom: 40px; }
 
 .section-programs {
-  text-align: center; }
-  @media screen and (min-width: 1024px) {
-    .section-programs {
-      margin-bottom: 75px; } }
+  text-align: center;
+  margin-bottom: 75px; }
   .section-programs .programs-grid {
     padding: 60px 0;
     width: 100%;

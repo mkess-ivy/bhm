@@ -35,7 +35,7 @@ get_header();
 		<!-- About -->
 		<div class="bhm-wrapper home">
 			<section class="bhm-about section-services section-wrapper reveal">
-				
+
 				<?php if( have_rows ('about-section') ):
 					$i = 0;
 					?>
@@ -44,7 +44,7 @@ get_header();
 						<div class="section-title-text"><?php the_field('about-section-title'); ?></div>
 						<div class="section-title-bottom"></div>
 					</div>
-					
+
 					<div class="frow justify-between">
 						<?php while( have_rows ('about-section') ): the_row();
 
@@ -69,7 +69,7 @@ get_header();
 							<div class="bhm-about-single-title"><?php echo $title; ?></div>
 							<div class="bhm-about-single-content"><?php echo $content; ?></div>
 						</div>
-						
+
 						<?php endwhile; ?>
 					</div>
 				<?php endif; ?>
@@ -139,29 +139,29 @@ get_header();
 				</div>
 			</section>
 		</div>
-		
+
 		<section class="section-testimonials reveal">
 			<div class="section-testimonials-bg" style="background-image: url(<?php echo esc_url(get_field('home-testimonial-img')['url']); ?>);">
 				<div class="testimonials-content"><?php the_field('home-testimonial-msg');?></div>
 				<a class="bhm-btn-base" href="<?php echo the_field('home-testimonial-link'); ?>" target="_blank"><div><?php the_field('home-testimonial-link-title'); ?></div></a>
 			</div>
 		</section>
-		
+
 		<section class="section-services section-wrapper reveal">
-			
+
 			<div class="section-title-wrapper initial-title">
 				<div class="section-title-text"><?php the_field('testimonial_title'); ?></div>
 				<div class="section-title-bottom"></div>
 			</div>
 
 			<div class="reviews-wrapper">
-				
+
 				<?php echo do_shortcode('[testimonial_rotator id="665" prev_next="1"]'); ?>
-				
+
 			</div>
-			
+
 		</section>
-		
+
 		<!-- Partners -->
 		<section class="section-services reveal">
 			<div class="bhm-wrapper">
@@ -176,13 +176,13 @@ get_header();
 							<div class="partners-single"><img src="<?php echo get_field('partner-logo-two', 'option')['url'] ?>" class="partner-logo-img" /></div>
 							<div class="partners-single"><img src="<?php echo get_field('partner-logo-three', 'option')['url'] ?>" class="partner-logo-img" /></div>
 							<div class="partners-single"><img src="<?php echo get_field('partner-logo-four', 'option')['url'] ?>" class="partner-logo-img" /></div>
-							
+
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		
+
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

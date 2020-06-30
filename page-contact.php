@@ -32,7 +32,7 @@ get_header();
 		endwhile; // End of the loop.
 		?>
 
-		
+
 		<section class="section-services section-wrapper">
 			<div class="bhm-wrapper">
 				<div class="section-title-wrapper initial-title reveal">
@@ -42,13 +42,13 @@ get_header();
 				<div class="section-body reveal">
 					<?php the_field('section-contact-content'); ?>
 				</div>
-				<?php if( have_rows('contact-info') ): 
+				<?php if( have_rows('contact-info') ):
 					$i = 0;
 					?>
-					
+
 					<div class="contact-info-wrapper reveal">
 						<div class="frow justify-between">
-							<?php while( have_rows('contact-info') ): the_row(); 
+							<?php while( have_rows('contact-info') ): the_row();
 
 							$i++;
 
@@ -61,7 +61,7 @@ get_header();
 							$icon = get_sub_field('contact-icon');
 							$link = get_sub_field('contact-link');
 							$description = get_sub_field('contact-text');
-							
+
 
 							?>
 
@@ -83,14 +83,14 @@ get_header();
 
 		<section class="section-testimonials reveal">
 			<div class="section-testimonials-bg" style="background-image: url(<?php echo esc_url(get_field('contact-testimonial-img')['url']); ?>);">
-				
+
 					<div class="testimonials-content"><?php the_field('contact-testimonial-content'); ?></div>
 					<div class="testimonials-readmore"><?php the_field('contact-testimonial-readmore'); ?></div>
 					<a class="bhm-btn-base" href="<?php echo the_field('contact-testimonial-link'); ?>" ><div><?php the_field('contact-testimonial-link-title'); ?></div></a>
-				
+
 			</div>
 		</section>
-		
+
 		<section class="section-services reveal">
 			<div class="bhm-wrapper">
 				<div class="services-wrapper">
@@ -106,7 +106,7 @@ get_header();
 							<div class="forms-single">
 								<a class="bhm-btn-base" href="<?php echo the_field('client-form-link', 'option'); ?>" target="_blank"><div><?php the_field('client-form-link-title', 'option'); ?></div></a>
 							</div>
-							
+
 							<div class="forms-single">
 								<a class="bhm-btn-base" href="<?php echo the_field('schedule-link', 'option'); ?>" target="_blank"><div><?php the_field('schedule-form-link-title', 'option'); ?></div></a>
 							</div>
@@ -123,9 +123,10 @@ get_header();
 						</div>
 					</div>
 				</div>
+
 			</div>
 		</section>
-		
+
 		<section class="contact-details reveal">
 			<div class="frow justify-between">
 				<div class="contact-details-img" style="background-image:url(<?php the_field('contact-details-img'); ?>);"></div>
@@ -144,7 +145,7 @@ get_header();
 				</div>
 			</div>
 		</section>
-		
+
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
