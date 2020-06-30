@@ -14,7 +14,7 @@
 	left: 0;
 	background-size: cover;
 	background-position: center center;
-	background-color: rgba(150,18,14,0.95);
+	background-color: rgba(150,18,14,0.97);
 	z-index: 9009;
 	overflow: scroll;
 }
@@ -30,7 +30,14 @@
 .overlay nav {
     width: 100%;
 	text-align: center;
-	padding: 6em 0;
+	padding: 2em 0;
+
+	@include phone {
+		padding: 6em 0;
+	}
+	@include tablet {
+		padding: 12em 0;
+	}
 }
 .overlay ul {
   list-style: none;
@@ -140,10 +147,8 @@
 	}
 
 	li {
-		// float: left;
 		display: inline-block;
 		position: relative;
-		// padding-right: 50px;
 		text-transform: uppercase;
 		width: 100%;
 		text-align: center;
@@ -187,15 +192,7 @@
 		display: none;
 	}
 }
-// @media screen and (min-width: 37.5em) {
-// 	.menu-toggle {
-// 		display: none;
-// 	}
-// 	.main-navigation ul {
-// 		display: block;
-// 		text-align: center;
-// 	}
-// }
+
 
 .comment-navigation,
 .posts-navigation,
@@ -269,13 +266,12 @@
 
 // Global Footer
 .site-footer {
-	background: $dark-red;
-	color: $white;
+	color: $black;
 	padding-top: 40px;
+	border-top: 2px solid $red;
 }
 .footer-menu-title {
-	text-transform: uppercase;
-	font-weight: bold;
+	@include header;
 }
 .page {
 	margin: 0 !important;
@@ -286,7 +282,7 @@
 		list-style: none;
 
 		a {
-			color: $white;
+			color: $black;
 
 			&:visited {
 				color: $white;
@@ -313,7 +309,12 @@
 		li {
 			
 			a {
-				color: $white;
+				color: $black !important;
+
+				&:hover {
+					text-decoration: none !important;
+					color: $red !important;
+				}
 			}
 		}
 	}
@@ -335,15 +336,21 @@ span.bullet-text {
 }
 
 .mail-icon a {
-	color: $white;
+	color: $black;
 
 	&:visited,
 	&:hover {
-		color: $white;
+		color: $red;
 	}
 }
 .git-items-wrapper {
 	padding-top: 15px;
+	font-size: 16px;
+
+	.item {
+		font-size: 16px;
+	}
+	
 }
 
 .footer-logo {
@@ -359,6 +366,14 @@ span.bullet-text {
 
 	@include desktop-small {
 		width: 15%;
+	}
+
+	img {
+		width: 100px;
+
+		@include tablet {
+			width: 135px;
+		}
 	}
 }
 .quick-links {
@@ -381,13 +396,11 @@ span.bullet-text {
 	@include phone-large {
 		padding-bottom: 75px;
 	}
-
 	@include tablet {
 		width: 40%;
 		padding-bottom: 0;
 	}
-
-	@include desktop-small {
+	@include laptop {
 		width: 30%;
 	}
 	@include desktop {
@@ -398,12 +411,20 @@ span.bullet-text {
 	width: 100%;
 	text-align: center;
 
+	img {
+		width: 100px;
+
+		@include tablet {
+			width: 135px;
+		}
+	}
+
 	@include tablet {
 		width: 10%;
 		padding-bottom: 0;
 	}
 
-	@include desktop-small {
+	@include laptop {
 		width: 15%;
 	}
 }
@@ -418,7 +439,7 @@ span.bullet-text {
 	li {
 		a {
 			color: $white;
-			font-size: 18px !important;
+			font-size: 16px !important;
 
 			&:hover {
 				text-decoration: underline;
@@ -426,12 +447,6 @@ span.bullet-text {
 		}
 	}
 }
-
-
-
-
-
-
 
 .header-book-appt {
 	border: 1px solid $red;
@@ -445,7 +460,6 @@ span.bullet-text {
 		color: $red;
 
 		&:hover {
-			// background: $red;
 			color: $black;
 		}
 		

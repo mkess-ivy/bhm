@@ -34,51 +34,24 @@ get_header();
 		?>
 
 		<div class="bhm-wrapper">
-			<section class="bhm-about reveal">
-				
-
-				<?php if( have_rows ('about-section') ):
-					$i = 0;
-					?>
-
-
-					<div class="section-title initial-title">
-						<div class="section-title-text"><?php the_field('about-section-title'); ?></div>
-						<div class="section-title-bottom"></div>
-					</div>
-					
-					<div class="frow justify-between">
-						<?php while( have_rows ('about-section') ): the_row();
-
-						$i++;
-
-						if( $i > 3 )
-						{
-							break;
-						}
-
-						// vars
-						$icon = get_sub_field('about-icon');
-						$title = get_sub_field('about-title');
-						$content = get_sub_field('about-content');
-
-						?>
-
-						<div class="bhm-about-single">
-							<div class="bhm-icon">
-								<img src="<?php echo $icon['url'] ?>" class="bhm-icon-size" />
-							</div>
-							<div class="bhm-about-single-title"><?php echo $title; ?></div>
-							<div class="bhm-about-single-content"><?php echo $content; ?></div>
-						</div>
-						
-						<?php endwhile; ?>
-					</div>
-				<?php endif; ?>
+			<section class="section-services section-wrapper reveal">
+				<div class="section-title-wrapper initial-title">
+					<div class="section-title-text"><?php the_field('welcome-home-title'); ?></div>
+					<div class="section-title-bottom"></div>
+				</div>
+				<div class="accred-logo">
+					<img class="accred-logo-img" src="<?php echo esc_url(get_field('welcome-home-img')['url']); ?>" />
+				</div>
+				<div class="section-mantra">
+					<?php the_field('welcome-home-mantra'); ?>
+				</div>
+				<div class="section-body">
+					<?php the_field('welcome-home-content'); ?>
+				</div>
 			</section>
 
-			<section class="bhm-values reveal">
-				<div class="section-title">
+			<section class="section-wrapper reveal">
+				<div class="section-title-wrapper initial-title">
 					<div class="section-title-text"><?php the_field('core-values-title'); ?></div>
 					<div class="section-title-bottom"></div>
 				</div>
@@ -89,7 +62,7 @@ get_header();
 		</div>
 
 		<section class="section-testimonials">
-			<div class="section-testimonials-bg" style="background-image: url(<?php the_field('about-testimonial-img'); ?>);">
+			<div class="section-testimonials-bg" style="background-image: url(<?php echo esc_url(get_field('about-testimonial-img')['url']); ?>);">
 				
 					<div class="testimonials-content"><?php the_field('about-testimonial-content'); ?></div>
 					<div class="testimonials-author"><?php the_field('about-testimonial-author'); ?></div>
@@ -97,9 +70,9 @@ get_header();
 			</div>
 		</section>
 
-		<section class="section-team reveal">
+		<section class="section-services section-wrapper reveal">
 			<div class="bhm-wrapper">
-				<div class="section-title">
+				<div class="section-title-wrapper initial-title">
 					<div class="section-title-text"><?php the_field('section-team-title'); ?></div>
 					<div class="section-title-bottom"></div>
 				</div>

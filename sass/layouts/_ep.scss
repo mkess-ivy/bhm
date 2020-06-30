@@ -3,10 +3,6 @@
     width: 75%;
     margin: auto;
 
-    @include small-tablet {
-        width: 100%;
-    }
-
     .single-ep {
         width: 100%;
         padding-bottom: 50px;
@@ -25,12 +21,16 @@
 
         .ep-title {
             text-align: center;
-            padding: 22px 0;
-            background-color: $dark-red;
-            color: $white;
+            padding: 12px 10px;
+            background-color: $red;
+            color: $black;
+
+            @include tablet {
+                padding: 22px 10px;
+            }
         }
         .ep-meta {
-            border: 1px solid $dark-red;
+            border: 1px solid $red;
             padding: 20px;
             text-align: center;
 
@@ -45,12 +45,13 @@
             }
 
             .ep-link {
-                // display: inline-block;
-                padding: 6px 20px;
-                // border: 1px solid;
-                // color: $dark-red;
-                font-size: 14px;
-                // text-transform: uppercase;
+                padding: 5px 12px;
+                font-size: 12px;
+
+                @include tablet {
+                    padding: 6px 20px;
+                    font-size: 14px;
+                }
             }
         }
     }

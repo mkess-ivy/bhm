@@ -16,6 +16,7 @@
 
         @include tablet {
             width: 32%;
+            padding: 0 25px 75px;
         }
     }
 }
@@ -40,9 +41,7 @@
     }
 }
 .contact-details-img {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    @include bg_properties;
     width: 100%;
     height: 50vh;
     // margin-bottom: 50px;
@@ -52,7 +51,7 @@
     }
 }
 .contact-details {
-    @include desktop-small {
+    @include laptop {
         padding-top: 7em;
     }
 }
@@ -69,17 +68,17 @@
         font-size: 24px;
         padding-bottom: 40px;
         padding-top: 30px;
+        @include header;
     }
     .contact-details-add {
         padding-bottom: 40px;
     }
     .contact-details-cta {
-        background-color: $dark-red;
+        background-color: $red;
         padding: 14px 24px;
-        color: $white;
-        text-transform: uppercase;
+        color: $black;
         font-size: 14px;
-        font-weight: bold;
+        @include header;
     }
     a {
         text-decoration: none;

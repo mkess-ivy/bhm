@@ -27,3 +27,55 @@
 @mixin column-width($numberColumns: 3) {
 	width: map-get( $columns, $numberColumns ) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
 }
+
+// Background Properties
+@mixin bg_properties {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+@mixin body-services {
+	width: 100%;
+	padding-bottom: 75px;
+
+	@include phone-large {
+		padding-bottom: 75px;
+	}
+	@include tablet {
+		width: 55%;
+		margin: 0 auto;
+	}
+	@include laptop {
+		width: 31%;
+	}
+	@include tv {
+		width: 28%;
+	}
+	&:last-child {
+		padding-bottom: 0;
+	}
+}
+
+@mixin body-services-copy {
+	font-family: $body-font;
+	font-size: 14px;
+
+	@include laptop {
+		font-size: 16px;
+	}
+}
+
+@mixin body-services-header {
+	font-family: $primary-font;
+	text-transform: uppercase;
+	font-weight: $bold;
+	font-size: 18px;
+	padding-bottom: 15px;
+}
+
+@mixin header {
+	font-family: $primary-font;
+	font-weight: $bold;
+	text-transform: uppercase;
+}

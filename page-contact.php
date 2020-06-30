@@ -33,9 +33,9 @@ get_header();
 		?>
 
 		
-		<section class="contact-info-section">
+		<section class="section-services section-wrapper">
 			<div class="bhm-wrapper">
-				<div class="section-title initial-title reveal">
+				<div class="section-title-wrapper initial-title reveal">
 					<div class="section-title-text"><?php the_field('section-contact-title'); ?></div>
 					<div class="section-title-bottom"></div>
 				</div>
@@ -67,7 +67,7 @@ get_header();
 
 							<div class="contact-info-single">
 								<div class="contact-icon">
-									<a href="<?php echo $link; ?>"><img src="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt'] ?>" /></a>
+									<a href="<?php echo $link; ?>"><img src="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt']  ?>" class="bhm-icon-size" /></a>
 								</div>
 								<div class="contact-description">
 									<?php echo $description; ?>
@@ -82,7 +82,7 @@ get_header();
 		</section>
 
 		<section class="section-testimonials reveal">
-			<div class="section-testimonials-bg" style="background-image: url(<?php the_field('contact-testimonial-img'); ?>);">
+			<div class="section-testimonials-bg" style="background-image: url(<?php echo esc_url(get_field('contact-testimonial-img')['url']); ?>);">
 				
 					<div class="testimonials-content"><?php the_field('contact-testimonial-content'); ?></div>
 					<div class="testimonials-readmore"><?php the_field('contact-testimonial-readmore'); ?></div>
@@ -91,25 +91,35 @@ get_header();
 			</div>
 		</section>
 		
-		<section class="section-resources reveal">
+		<section class="section-services reveal">
 			<div class="bhm-wrapper">
-				<div class="section-title">
-					<div class="section-title-text"><?php the_field('resources-title', 'option'); ?></div>
-					<div class="section-title-bottom"></div>
-				</div>
-				<div class="section-body">
-					<?php the_field('resources-description', 'option'); ?>
-				</div>
-				<div class="forms-wrapper">
-					<div class="frow justify-between">
-						<div class="forms-single">
-							<a class="bhm-btn-base" href="<?php echo the_field('client-form-link', 'option'); ?>" target="_blank"><div><?php the_field('client-form-link-title', 'option'); ?></div></a>
+				<div class="services-wrapper">
+					<div class="section-title-wrapper">
+						<div class="section-title-text"><?php the_field('resources-title', 'option'); ?></div>
+						<div class="section-title-bottom"></div>
+					</div>
+					<div class="section-body">
+						<?php the_field('resources-description', 'option'); ?>
+					</div>
+					<div class="forms-wrapper">
+						<div class="frow justify-between">
+							<div class="forms-single">
+								<a class="bhm-btn-base" href="<?php echo the_field('client-form-link', 'option'); ?>" target="_blank"><div><?php the_field('client-form-link-title', 'option'); ?></div></a>
+							</div>
+							
+							<div class="forms-single">
+								<a class="bhm-btn-base" href="<?php echo the_field('schedule-link', 'option'); ?>" target="_blank"><div><?php the_field('schedule-form-link-title', 'option'); ?></div></a>
+							</div>
 						</div>
-						<div class="forms-single">
-							<a class="bhm-btn-base" href="<?php echo the_field('referral-form-link', 'option'); ?>" target="_blank"><div><?php the_field('referral-form-link-title', 'option'); ?></div></a>
+					</div>
+					<div class="referral-wrapper">
+						<div class="section-body">
+							<?php the_field('resources-description-002', 'option'); ?>
 						</div>
-						<div class="forms-single">
-							<a class="bhm-btn-base" href="<?php echo the_field('schedule-link', 'option'); ?>" target="_blank"><div><?php the_field('schedule-form-link-title', 'option'); ?></div></a>
+						<div class="forms-wrapper">
+							<div class="forms-single">
+								<a class="bhm-btn-base" href="<?php echo the_field('referral-form-link', 'option'); ?>" target="_blank"><div><?php the_field('referral-form-link-title', 'option'); ?></div></a>
+							</div>
 						</div>
 					</div>
 				</div>

@@ -55,7 +55,7 @@
 			<div class="overlay_container clear">
 				<nav>
 					
-						<img class="overlay-logo" src="<?php echo get_field('overlay_logo', 'option')['url'] ?>" />
+						<a href="/" alt="Home"><img class="overlay-logo" src="<?php echo get_field('overlay_logo', 'option')['url'] ?>" /></a>
 					
 						<?php
 							wp_nav_menu( array(

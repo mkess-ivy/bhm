@@ -1,35 +1,3 @@
-.bhm-about-single {
-    width: 100%;
-    text-align: center;
-    padding-bottom: 75px;
-
-    @include tablet {
-        width: 31%;
-    }
-
-    @include laptop {
-        width: 31%;
-        padding-bottom: 0;
-    }
-
-    .bhm-about-single-title {
-        text-transform: uppercase;
-        font-weight: $bold;
-        font-size: 20px;
-        padding-bottom: 30px;
-
-        @include tablet {
-            font-size: 18px;
-        }
-    }
-    .bhm-about-single-content {
-        font-family: $body-font;
-    }
-    .bhm-icon-size {
-        height: 70px;
-        padding-bottom: 30px;
-    }
-}
 .bhm-values {
     @include laptop {
         padding-top: 25px; 
@@ -38,10 +6,6 @@
     .core-values {
         text-align: center;
         font-family: $body-font;
-
-        @include laptop {
-            // width: 60%;
-        }
     }
 }
 
@@ -93,3 +57,13 @@
         }
     }
 }
+
+.section-mantra {
+    font-size: 18px;
+    padding: 40px 0 20px;
+    font-style: italic;
+  
+    @include desktop {
+      padding: 75px 0 20px;
+    }
+  }

@@ -7,18 +7,29 @@
   @include phone-large {
     padding: 0 50px 75px;
   }
+  @include tablet {
+    padding: 0 50px 50px;
+  }
   @include laptop {
-    // padding: 0 100px 120px;
-    padding: 0 60px 100px;
+    padding: 0 60px 50px;
   }
   @include desktop {
-    padding: 0 100px 100px;
+    padding: 0 100px 50px;
+  }
+  @include tv {
+    max-width: 1440px;
+    margin: auto;
+    padding: 0 100px 75px;
   }
 
   &.footer-menu {
     @include desktop-small {
       padding-bottom: 25px;
     }
+  }
+
+  &.home {
+    padding-bottom: 0;
   }
 }
 .bhm-wrapper-testimonials {
@@ -32,6 +43,7 @@
     padding: 0 75px;
   }
 }
+
 // Global
 .site-logo {
   text-align: center;
@@ -72,14 +84,18 @@
 
 // Slides
 .slide-title {
-  // font-size: 26px !important;
-  font-size: 32px !important;
-  text-transform: uppercase;
+  font-size: 22px !important;
   line-height: 1 !important;
+  @include header;
+
+  @include phone {
+    font-size: 28px !important;
+  }
 
   @include phone-large {
     font-size: 38px !important;
   }
+
   @include tablet {
     font-size: 40px !important;
   }
@@ -87,6 +103,7 @@
   @include laptop {
     font-size: 55px !important;
   }
+
   @include desktop {
     font-size: 65px !important;
   }
@@ -99,7 +116,6 @@
   p {
     color: $red !important;
     margin: 0;
-    // text-transform: uppercase;
     font-size: 24px !important;
     line-height: 26px;
     
@@ -118,8 +134,8 @@
 }
 
 // Section Title
-.section-title {
-  padding: 75px 0 50px;
+.section-title-wrapper {
+  padding: 0px 0 50px;
   text-align: center;
 
   @include laptop {
@@ -133,34 +149,39 @@
       padding-top: 50px;
     }
   }
+}
+.section-title-text {
+  font-size: 20px;
+  text-align: center;
+  @include header;
 
-  .section-title-text {
-    font-weight: $bold;
-    font-size: 24px;
+  @include phone-large {
+    font-size: 26px;
+  }
 
-    @include laptop {
-      font-size: 32px;
-    }
+  @include laptop {
+    font-size: 32px;
   }
-  .section-title-bottom {
-    margin: 7px auto 0;
-    width: 100px;
-    border-top: 3px solid $red;
-  }
+}
+.section-title-bottom {
+  margin: 7px auto 0;
+  width: 100px;
+  border-top: 3px solid $red;
 }
 .section-body {
   width: 100%;
   margin: auto;
   font-family: $body-font;
-  // font-size: 18px;
   text-align: center;
 
   @include tablet {
     width: 80%;
   }
   @include laptop {
-    // width: 65%;
     font-size: 20px;
+  }
+  @include tv {
+    width: 60%;
   }
 }
 
@@ -169,10 +190,12 @@
   .highlight-img {
     width: 100%;
     height: 40vh;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+    @include bg_properties;
 
+    @include tablet {
+      width: 35%;
+      height: auto;
+    }
     @include laptop {
       width: 50%;
       height: auto;
@@ -180,24 +203,27 @@
   }
   .highlight-content {
     width: 100%;
-    background-color: $dark-red;
-    color: $white;
+    background-color: $red;
+    color: $black;
     padding: 50px 25px;
-    // font-size: 18px;
 
     @include phone-large {
-      padding: 50px 50px;  
+      padding: 50px;  
     }
 
     @include tablet {
-      padding: 75px;
+      padding: 40px;
+      width: 65%;
     }
-
     @include laptop {
       width: 50%;
-      // padding: 75px 100px;
-      padding: 75px 50px;
+    }
 
+    @include desktop {
+      padding: 75px 60px;
+    }
+    @include tv {
+      padding: 75px 50px;
     }
   }
   
@@ -205,20 +231,17 @@
     padding-bottom: 40px;
 
     .highlight-title-text {
-      text-align: center;
-      text-transform: uppercase;
-      font-size: 26px;
+      @extend .section-title-text;
     }
     .highlight-title-bottom {
       margin: 7px auto 0;
       width: 75px;
-      border-top: 3px solid $white;
+      border-top: 3px solid $black;
     }
   }
   .highlight-copy {
     font-family: $body-font;
     text-align: center;
-    // color: purple;
 
     @include tablet {
       width: 85%;
@@ -235,24 +258,27 @@
 // Testimonials
 .section-testimonials-bg {
   width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  // height: 40vh;
+  @include bg_properties;
   text-align: center;
-  padding: 120px 25px;
+  padding: 75px 25px;
 
   @include phone-large {
-    padding: 120px 50px;
+    padding:75px 50px;
+  }
+  @include tablet {
+    padding: 75px;
   }
   @include laptop {
-    padding: 120px 75px;
+    padding: 75px 125px;
+  }
+  @include desktop-small {
+    padding: 125px;
   }
   @include desktop {
-    padding: 120px 150px;
+    padding: 125px 150px;
   }
   @include tv {
-    padding: 120px 225px;
+    padding: 125px 200px;
   }
 
   .testimonials-content {
@@ -263,6 +289,7 @@
     line-height: 1.4;
     margin: auto;
     padding: 0 0 1.5em;
+    font-family: $primary-font;
 
     @include phone-large {
       font-size: 26px;
@@ -277,18 +304,24 @@
       font-size: 34px;
       width: 75%;
     }
+    @include tv {
+      padding: 0 0 1em;
+    }
   }
 
   .testimonials-author {
     color: $white;
-    font-size: 22px;
+    font-size: 16px;
     font-weight: bold;
+
+    @include phone-large {
+
+    }
   }
 
   .testimonials-readmore {
     color: $white;
     font-size: 18px;
-    // width: 65%;
     margin: auto;
     padding-bottom: 30px;
 
@@ -298,7 +331,6 @@
 
     @include laptop {
       width: 85%;
-      // width: 65%;
       font-size: 22px;
     }
     @include desktop {
@@ -310,14 +342,11 @@
 
 // Partners
 .partners-single {
-  // width: 145px;
-  width: 60%;
+  width: 40%;
   margin: auto;
-  padding: 0 25px 30px 0;
 
   @include phone-large {
     width: 175px;
-    // padding-bottom: 50px;
   }
 
   @include small-tablet {
@@ -329,48 +358,51 @@
   }
 
   @include laptop {
-    width: 170px;
+    width: 190px;
   }
 
   .partner-logo-img {
-    // width: 130px;
     width: 100%;
-
-    @include phone-large {
-      // width: 140px;
-    }
-
-    @include laptop {
-      // width: 150px;
-    }
   }
 }
 
 // Buttons
 .bhm-btn-base {
   div {
-    background: $dark-red;
+    background: $red;
     width: auto;
     display: inline-block;
-    padding: 15px 22px;
-    color: $white;
-    text-transform: uppercase;
-    font-weight: $bold;
-    border: 2px solid $dark-red;
+    padding: 7px 22px;
+    color: $black;
+    border: 2px solid $red;
+    @include header;
+
+    @include tablet {
+      padding: 15px 22px;
+    }
 
     &:hover {
       background: $white;
-      color: $dark-red;
-      border: 2px solid $dark-red;
+      color: $red;
+      border: 2px solid $red;
     }
+  }
+}
+.btn-space {
+  div {
+    margin-bottom: 10px;
   }
 }
 
 // Forms 
 .forms-wrapper {
-  padding-top: 75px;
-  width: 75%;
+  padding-top: 30px;
+  width: 100%;
   margin: auto;
+
+  @include tablet {
+    width: 75%;
+  }
 
   @include desktop {
     width: 60%;
@@ -400,8 +432,78 @@
 .bhm-pre-post {
   text-align: center;
   text-transform: uppercase;
-  color: $dark-red;
+  color: $red;
 }
-.entry-header {
-  // margin-bottom: 4.2em;
+
+
+// Referrals
+.referral-wrapper {
+  margin-top: 75px;
+}
+
+.section-wrapper {
+  margin-top: 40px;
+
+  @include desktop {
+    margin-top: 75px;
+  }
+}
+
+// Resources
+.section-resources {
+  margin: 75px auto;
+
+  @include desktop-small {
+    margin: 50px auto;
+  }
+}
+
+// Gutenberg Blocks
+// Employee Portal Gutenberg Block Styles
+.post-30 .wp-block-columns {
+  width: 75%;
+  margin: 4em auto;
+
+  .wp-block-column { 
+      border: 3px solid $red;
+      text-align: center;
+  }
+
+  h3 {
+      background: $red;
+      color: $white;
+      padding: 15px;
+  }
+
+  .wp-block-button {
+      color: $white;
+      padding-bottom: 30px;
+  }
+}
+
+
+// Password Form - Employee Portal
+.post-password-form {
+  width: 80%;
+  margin: 6em auto;
+  text-align: center;
+
+  @include desktop {
+      width: 40%;
+      margin: 9em auto;
+  }
+}
+
+// Page Heroes
+.page-template-page-about,
+.page-template-page-services,
+.page-template-page-events,
+.page-template-page-contact,
+.page-template-page-faqs,
+.page-template-page-employee-portal {
+  .slide-wrap {
+    @include desktop {
+      height: 50vh;
+    }
+  }
 }

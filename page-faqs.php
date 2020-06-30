@@ -32,9 +32,9 @@ get_header();
 		endwhile; // End of the loop.
 		?>
 		
-		<section class="contact-info-section">
+		<section class="section-services section-wrapper">
 			<div class="bhm-wrapper">
-				<div class="section-title initial-title">
+				<div class="section-title-wrapper initial-title">
 					<div class="section-title-text"><?php the_field('section-faqs-title'); ?></div>
 					<div class="section-title-bottom"></div>
 				</div>
@@ -70,9 +70,9 @@ get_header();
 			</div>
 		</section>
 		
-		<section class="section-resources">
+		<section class="section-resources reveal">
 			<div class="bhm-wrapper">
-				<div class="section-title initial-title">
+				<div class="section-title-wrapper">
 					<div class="section-title-text"><?php the_field('resources-title', 'option'); ?></div>
 					<div class="section-title-bottom"></div>
 				</div>
@@ -84,14 +84,23 @@ get_header();
 						<div class="forms-single">
 							<a class="bhm-btn-base" href="<?php echo the_field('client-form-link', 'option'); ?>" target="_blank"><div><?php the_field('client-form-link-title', 'option'); ?></div></a>
 						</div>
-						<div class="forms-single">
-							<a class="bhm-btn-base" href="<?php echo the_field('referral-form-link', 'option'); ?>" target="_blank"><div><?php the_field('referral-form-link-title', 'option'); ?></div></a>
-						</div>
+						
 						<div class="forms-single">
 							<a class="bhm-btn-base" href="<?php echo the_field('schedule-link', 'option'); ?>" target="_blank"><div><?php the_field('schedule-form-link-title', 'option'); ?></div></a>
 						</div>
 					</div>
 				</div>
+				<div class="referral-wrapper">
+					<div class="section-body">
+						<?php the_field('resources-description-002', 'option'); ?>
+					</div>
+					<div class="forms-wrapper">
+						<div class="forms-single">
+							<a class="bhm-btn-base" href="<?php echo the_field('referral-form-link', 'option'); ?>" target="_blank"><div><?php the_field('referral-form-link-title', 'option'); ?></div></a>
+						</div>
+					</div>
+				</div>
+				
 			</div>
 		</section>
 		

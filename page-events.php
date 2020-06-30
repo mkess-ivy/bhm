@@ -19,100 +19,64 @@ get_header();
 					 ?>
 					
 					<div class="bhm-wrapper">
-						<div class="section-title initial-title">
-							<div class="section-title-text"><?php the_field('section-events-title'); ?></div>
-							<div class="section-title-bottom"></div>
-						</div>
-						
-						<?php if( have_rows('single-event') ): 
-							$i = 0;
-							?>
-							
-							<div class="events-wrapper">
-								<div class="frow justify-between">
-									<?php while( have_rows('single-event') ): the_row(); 
-
-									$i++;
-
-									if( $i > 6 )
-									{
-										break;
-									}
-
-									// vars
-									$image = get_sub_field('event-img');
-									$title = get_sub_field('event-title');
-									$date = get_sub_field('event-date');
-									$time = get_sub_field('event-time');
-									$address = get_sub_field('event-address');
-									$description = get_sub_field('event-description');
-									$link = get_sub_field('event-link');
-
-									?>
-
-									<div class="events-single">
-										<div class="events-img">
-											<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
-										</div>
-										<div class="events-meta">
-											<div class="events-title"><?php echo $title; ?></div>
-											<div class="events-date">
-												<span class="date-icon">
-													<img src="<?php echo get_field('event-calendar-icon')['url']; ?>" />
-												</span>&nbsp;&nbsp;
-												<?php echo $date; ?> @ <span class="time">
-													<?php echo $time; ?>
-												</span>
-											</div>
-											<div class="events-address">
-												<span class="add-icon">
-													<img src="<?php echo get_field('event-address-icon')['url']; ?>" />
-												</span>&nbsp;&nbsp;
-												<?php echo $address; ?>
-											</div>
-											<div class="events-description">
-												<?php echo $description; ?>
-											</div>
-										</div>
-										<a class="bhm-btn-base" href="<?php echo $link; ?>">
-											<div>RSVP</div>
-										</a>
-									</div>
-
-									<?php endwhile; ?>
-								</div>
+						<section class="section-wrapper section-services">
+							<div class="section-title-wrapper initial-title">
+								<div class="section-title-text"><?php the_field('section-events-title'); ?></div>
+								<div class="section-title-bottom"></div>
 							</div>
-						<?php endif; ?>
+							<div class="section-body reveal">
+								<?php the_field('section-events-description'); ?>
+							</div>
+							<div class="calendar-wrapper">
+								<img src="<?php echo esc_url(get_field('calendar-img')['url']); ?>" />
+								<div class="section-body reveal">
+								<?php the_field('calendar-description'); ?>
+							</div>
+							<div class="calendar-pdf-wrapper">
+								<a href="<?php echo the_field('calendar-pdf-link'); ?>" target="_blank"><?php echo the_field('calendar-pdf-title'); ?></a>
+							</div>
+							<div class="calendar-link-wrapper">
+								<a class="bhm-btn-base" href="<?php echo the_field('calendar-link'); ?>" target="_blank"><div><?php the_field('calendar-link-title'); ?></div></a>
+							</div>
+						</div>
 					</div>
 				</section>
-				<section class="gallery-wrapper">
-					
-					<div class="frow justify-between">
-						<?php query_posts(array('post_type' => 'post','posts_per_page' => 3, 'orderby' => 'date'));
+				<!-- <section class="gallery-wrapper">
+					<div class="section-title initial-title">
+						<div class="section-title-text"><?php the_field('gallery-title'); ?></div>
+						<div class="section-title-bottom"></div>
+					</div>
+					<div class="section-body reveal">
+						<?php the_field('gallery-description'); ?>
+					</div>
+					<div class="section-wrapper">
+						<div class="frow justify-between">
+							<?php query_posts(array('post_type' => 'post','posts_per_page' => 3, 'orderby' => 'date'));
+								
+								if(have_posts()) : while(have_posts()) : the_post(); ?>
 							
-							if(have_posts()) : while(have_posts()) : the_post(); ?>
-						
-							<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
-						
-							<div class="gallery-img single" style="background-image:url('<?php echo $backgroundImg[0]; ?>'); ">
-								<div class="frow centered-column">
-									<div class="gallery-title"><?php the_title(); ?></div>
-									<a class="gallery-cta-link" href="<?php echo esc_url( get_permalink() ); ?>">
-										<div class="gallery-cta">
-											<?php esc_html_e( 'View Gallery', 'textdomain' ); ?>
-										</div>
-									</a>
+								<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
+							
+								<div class="gallery-img single" style="background-image:url('<?php echo $backgroundImg[0]; ?>'); ">
+									<div class="frow centered-column">
+										<div class="gallery-title"><?php the_title(); ?></div>
+										<a class="gallery-cta-link" href="<?php echo esc_url( get_permalink() ); ?>">
+											<div class="gallery-cta">
+												<?php esc_html_e( 'View Gallery', 'textdomain' ); ?>
+											</div>
+										</a>
+									</div>
 								</div>
-							</div>
-						
-						<?php endwhile; ?>
+							
+							<?php endwhile; ?>
+						</div>
 					</div>
 						
 
 					<?php endif; wp_reset_query(); ?>
-				</section>
+				</section> -->
 				<section class="section-testimonials">
-					<div class="section-testimonials-bg" style="background-image: url(<?php the_field('events-testimonial-img'); ?>);">
+					<div class="section-testimonials-bg" style="background-image: url(<?php echo esc_url(get_field('events-testimonial-img')['url']); ?>);">
 						
 							<div class="testimonials-content"><?php the_field('events-testimonial-content'); ?></div>
 							<div class="testimonials-author">&ndash;&nbsp;<?php the_field('events-testimonial-author'); ?></div>

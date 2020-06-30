@@ -1,80 +1,11 @@
-.bhm-programs {
-    text-align: center;
-    .programs-wrapper {
-        padding-top: 75px;
-    }
-    .programs-single {
-        width: 100%;
-        padding-bottom: 75px;
-        // padding: 0 15px;
-        // text-align: center;
-
-        @include phone-large {
-            padding-bottom: 75px;
-        }
-
-        @include tablet {
-            width: 47%;
-        }
-        @include desktop {
-            width: 25%;
-            padding: 10px;
-        }
-        @include tv {
-            padding: 20px;
-        }
-        .programs-icon {
-            padding-bottom: 25px;
-        }
-        .programs-title {
-            text-transform: uppercase;
-            font-weight: $bold;
-            font-size: 18px;
-            // padding-bottom: 20px;
-            min-height: 60px;
-            margin-bottom: 15px;
-
-            @include tablet {
-                min-height: 30px;
-            }
-
-        }
-        .programs-content {
-            @include tablet {
-                font-size: 14px;
-            }
-            @include laptop {
-                font-size: 16px;
-            }
-            
-        }
-    }
-}
 .section-services {
     text-align: center;
 
     .services-wrapper {
         padding: 75px 0 0;
-
-        // @include small-tablet {
-        //     padding: 125px 0 0;
-        // }
     }
     .services-single {
-        width: 100%;
-        padding-bottom: 75px;
-
-        @include phone-large {
-            padding-bottom: 75px;
-        }
-
-        @include tablet {
-            width: 31%;
-        }
-
-        @include tv {
-            width: 28%;
-        }
+        @include body-services;
     }
     .services-icon {
         padding-bottom: 25px;
@@ -83,41 +14,54 @@
         width: 60px;
     }
     .services-title {
-        font-weight: $bold;
-        text-transform: uppercase;
-        padding-bottom: 15px;
-        font-size: 18px;
+        @include body-services-header;
     }
     .services-content {
+        @include body-services-copy;
         @include tablet {
             font-size: 14px;
         }
     }
 }
 
-.eligibility-wrapper {
-    .eligibility-list {
-        padding-top: 25px;
-        padding-inline-start: 0;
+.eligibility-list {
+    padding-top: 25px;
+    padding-inline-start: 0;
 
-        @include laptop {
-            padding-inline-start: 40px;
-        }
+    @include laptop {
+        padding-inline-start: 40px;
+    }
 
-        li {
-            list-style: none;
-            font-family: $body-font;
-            padding-bottom: 10px;
-            font-size: 18px;
+    li {
+        list-style: none;
+        font-family: $body-font;
+        padding-bottom: 10px;
+        font-size: 18px;
 
-            span {
-                padding-right: 10px;
+        span {
+            padding-right: 10px;
+
+            img {
+                width: 10px;
+                margin-right: 7px;
             }
         }
     }
 }
+.eligibility-wrapper {
+    margin-top: 50px;
+}
 
 .client-highlight-img {
     min-height: 45vh;
+
+    @include desktop-small {
+        min-height: 35vh;
+    }
 }
 
+
+// Program Eligibility 
+.eligibility-wrapper {
+    margin-top: 7vh;
+  }
