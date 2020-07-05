@@ -31,7 +31,7 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
-
+		
 		<?php if( !post_password_required( $post )): ?>
 			<section class="section-services section-wrapper">
 				<div class="bhm-wrapper">
@@ -42,12 +42,12 @@ get_header();
 					<div class="section-body">
 						<?php the_field('section-ep-content'); ?>
 					</div>
-
+					
 					<?php if( have_rows('single-ep') ): ?>
-
+					
 						<div class="ep-wrapper">
 							<div class="frow justify-between">
-								<?php while( have_rows('single-ep') ): the_row();
+								<?php while( have_rows('single-ep') ): the_row(); 
 
 								// vars
 								$title = get_sub_field('ep-title');
@@ -57,7 +57,7 @@ get_header();
 								$link_title = get_sub_field('ep-link-title');
 								$link002 = get_sub_field('ep-link-002');
 								$link002_title = get_sub_field('ep-link-title-002');
-
+								
 								?>
 
 								<div class="single-ep">
@@ -80,7 +80,7 @@ get_header();
 											</a>
 
 											<?php if( $link002 ): ?>
-
+											
 												<a class="bhm-btn-base btn-space" href="<?php echo $link002 ?>" target="_blank">
 													<div class="ep-link">
 														<?php echo $link002_title ?>
@@ -88,7 +88,7 @@ get_header();
 												</a>
 											<?php endif; ?>
 										</div>
-
+										
 									</div>
 								</div>
 
@@ -99,7 +99,7 @@ get_header();
 				</div>
 			</section>
 		<?php endif; ?>
-
+		
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

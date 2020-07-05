@@ -1,16 +1,20 @@
 // Template Classes
 .bhm-welcome {
     text-align: center;
-
+  
     .accred-logo {
       padding-bottom: 40px;
-    }
+    }  
 }
+
 // Programs - Home
 .section-programs {
     text-align: center;
-    margin-bottom: 75px;
 
+    @include desktop-small {
+      margin-bottom: 75px;
+    }
+  
     .programs-grid {
       padding: 60px 0;
       width: 100%;
@@ -23,7 +27,7 @@
         width: 85%;
       }
     }
-
+  
     .programs-single {
       width: 100%;
       margin: 15px 2px;
@@ -55,12 +59,12 @@
         padding: 25px 45px;
       }
     }
-
+  
     .programs-single-title {
       padding: 10px 0 20px;
       @include body-services-header;
     }
-
+  
     .programs-single-content {
       font-size: 0.9rem;
       font-family: $body-font;
@@ -97,13 +101,14 @@
 
   &.vision-content {
       width: 100%;
-
+    
       @include tablet {
         margin-left: 40px;
         width: 75%;
       }
       @include desktop {
         margin-left: 75px;
+        width: 71%;
       }
       @include tv {
         width: 65%;
@@ -165,7 +170,7 @@
   padding: 0;
   margin: 0 auto 30px;
   float: none;
-
+  
   @include tablet {
     width: 20%;
     margin-right: 5%;
@@ -179,7 +184,7 @@
   text-align: center;
   font-family: $body-font;
   margin-top: 50px;
-
+  
   @include tablet {
     width: 68%;
     float: left;

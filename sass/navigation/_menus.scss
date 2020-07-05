@@ -1,7 +1,7 @@
 // Overlay
 .hamburger {
 	background: $dark-red;
-
+  
 	@include desktop-small {
 	  display: none !important;
 	}
@@ -223,7 +223,7 @@
 #primary-menu .current-menu-item a {
 	@include desktop-small {
 		color: $red;
-
+		
 	}
 }
 #primary-menu {
@@ -237,7 +237,7 @@
 	a {
 		color: $white;
 		font-size: 28px;
-
+		
 		@include small-tablet {
 			font-size: 36px;
 		}
@@ -290,16 +290,7 @@
 		}
 	}
 }
-.contact {
-	@include laptop {
-		width: 300px;
-		padding-inline-start: 0px;
-	}
 
-	li {
-		list-style: none;
-	}
-}
 
 .footer-navigation {
 	ul {
@@ -307,7 +298,7 @@
 		padding-inline-start: 0px;
 
 		li {
-
+			
 			a {
 				color: $black !important;
 
@@ -350,7 +341,7 @@ span.bullet-text {
 	.item {
 		font-size: 16px;
 	}
-
+	
 }
 
 .footer-logo {
@@ -402,9 +393,15 @@ span.bullet-text {
 	}
 	@include laptop {
 		width: 30%;
+		padding-inline-start: 0px;
+		// min-width: 300px;
 	}
 	@include desktop {
-		width: 25%;
+		width: 28%;
+	}
+
+	li {
+		list-style: none;
 	}
 }
 .award-logo {
@@ -462,6 +459,7 @@ span.bullet-text {
 		&:hover {
 			color: $black;
 		}
-
+		
 	}
 }
+

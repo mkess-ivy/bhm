@@ -17,6 +17,16 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<meta name="author" content="SVNCRWNS" />
+  	<meta name="description" content="BHMHS is a behavioral health organization serving the state of Maryland.  We provide PRP, employment programs, and DUI resources." />
+	<meta name="keywords" content="youth mental health, adult mental health, baltimore, medication management, driving under influence, employment programs, Maryland Behavioral Health, Baltimore PRP, best PRP in Maryland" />
+	<!-- Meta OG Tags -->
+	<meta name="og:title" content="Beautiful Hearts and Minds Health Services" />
+	<meta name="og:title" content="Behavioral Health Organization in Maryland" />
+	<meta property="og:url" content="http://www.bhmhs.org" />
+	<meta property="og:image" content="http://www.bhmhs.org/wp-content/uploads/2020/07/og-img.png" />
+
+  <link rel="shortcut icon" href="http://www.bhmhs.org/wp-content/uploads/2020/07/favicon.jpg" type="image/png" />  
 
 	<?php wp_head(); ?>
 </head>

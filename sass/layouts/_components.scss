@@ -48,7 +48,7 @@
 .site-logo {
   text-align: center;
   padding: 20px 0 0;
-
+  
   @include laptop {
     padding: 20px 0;
   }
@@ -58,7 +58,7 @@
 
     @include laptop {
       width: 225px;
-
+      
     }
   }
 }
@@ -78,12 +78,16 @@
 #post-24 .entry-title,
 #post-30 .entry-title,
 #post-313 .entry-title,
-#post-26 .entry-title {
+#post-26 .entry-title,
+#post-9 .entry-title,
+.entry-title {
   display: none;
 }
 
+
 // Slides
-.slide-title {
+.slide-title,
+.wpsisac-slick-slider.design-2 .wpsisac-image-slide .wpsisac-slide-wrap .wpsisac-slide-title {
   font-size: 22px !important;
   line-height: 1 !important;
   @include header;
@@ -118,7 +122,7 @@
     margin: 0;
     font-size: 24px !important;
     line-height: 26px;
-
+    
     @include phone-large {
       font-size: 28px !important;
     }
@@ -131,6 +135,9 @@
       line-height: 45px;
     }
   }
+}
+.wpsisac-slick-slider.design-2 .wpsisac-image-slide .wpsisac-slide-wrap .wpsisac-slider-overlay {
+  background: none !important;
 }
 
 // Section Title
@@ -208,7 +215,7 @@
     padding: 50px 25px;
 
     @include phone-large {
-      padding: 50px;
+      padding: 50px;  
     }
 
     @include tablet {
@@ -226,7 +233,7 @@
       padding: 75px 50px;
     }
   }
-
+  
   .highlight-title {
     padding-bottom: 40px;
 
@@ -284,7 +291,7 @@
   .testimonials-content {
     font-size: 22px;
     color: $white;
-    font-weight: $bold;
+    font-weight: $bold;    
     letter-spacing: 0.7px;
     line-height: 1.4;
     margin: auto;
@@ -394,7 +401,7 @@
   }
 }
 
-// Forms
+// Forms 
 .forms-wrapper {
   padding-top: 30px;
   width: 100%;
@@ -464,7 +471,7 @@
   width: 75%;
   margin: 4em auto;
 
-  .wp-block-column {
+  .wp-block-column { 
       border: 3px solid $red;
       text-align: center;
   }
@@ -503,7 +510,7 @@
 .page-template-page-employee-portal {
   .slide-wrap {
     @include desktop {
-      height: 50vh;
+      height: 65vh;
     }
   }
 }

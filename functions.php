@@ -184,3 +184,10 @@ if( function_exists('acf_add_options_page') ) {
 	acf_add_options_sub_page('Partners');
 
 }
+
+add_filter( 'timber_context', 'bhm_timber_context' );
+
+function bhm_timber_context( $context ) {
+	$context[ 'options' ] = get_fields('option');
+	return $context;
+}

@@ -22,7 +22,7 @@
 				<div class="frow justify-between">
 					<div class="footer-logo"><a href="/"><img src="<?php echo get_field('bhm_footer_logo', 'option')['url'] ?>" /></a></div>
 					<div class="quick-links">
-						<div class="footer-menu-title">Quick Links</div>
+						<div class="footer-menu-title"><?php the_field('quick_links_title', 'option'); ?></div>
 						<nav class="footer-navigation">
 							<?php
 							wp_nav_menu( array(
@@ -32,28 +32,28 @@
 						</nav><!-- #site-navigation -->
 					</div>
 					<div class="contact">
-						<div class="footer-menu-title">Get in Touch</div>
+						<div class="footer-menu-title"><?php the_field('get_connected_title', 'option'); ?></div>
 						<div class="git-items-wrapper">
 							<div class="item">
 								<span class="bullet-img"><img src="<?php echo get_field('address_icon', 'option')['url'] ?>" /></span>
-								<span class="bullet-text">1404 West Baltimore Street<span class="city">Baltimore, Maryland 21223</span>
+								<span class="bullet-text"><?php the_field('street_address', 'option'); ?><span class="city"><?php get_field('city_state_zip', 'option'); ?></span>
 								</span>
 							</div>
 							<div class="item">
 								<span class="bullet-img"><img src="<?php echo get_field('phone_icon', 'option')['url'] ?>" /></span>
-								<span class="bullet-text">410-800-2121 (office)</span>
+								<span class="bullet-text"><?php the_field('office_number', 'option'); ?></span>
 							</div>
 							<div class="item">
 								<span class="no-bullet-img"></span>
-								<span class="bullet-text no-bullet">443-478-4716 (fax)</span>
+								<span class="bullet-text no-bullet"><?php the_field('fax_number', 'option'); ?></span>
 							</div>
 							<div class="item">
 								<span class="no-bullet-img"></span>
-								<span class="bullet-text no-bullet">443-938-9944 (emergency)</span>
+								<span class="bullet-text no-bullet"><?php the_field('emergency_number', 'option'); ?></span>
 							</div>
 							<div class="item">
 								<span class="bullet-img"><img src="<?php echo get_field('mail_icon', 'option')['url'] ?>" /></span>
-								<span class="bullet-text mail-icon"><a href="mailto:admin@bhmhs.org">admin@bhmhs.org</a></span>
+								<span class="bullet-text mail-icon"><a href="<?php the_field('email_link', 'option'); ?>"><?php the_field('email_address', 'option'); ?></a></span>
 							</div>
 						</div>
 					</div>
